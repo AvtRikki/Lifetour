@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru" data-validate="html">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сайт туристического агенства «Lifetour»">
+    <meta name="keywords" content="туризм, кавказ, камчатка, алтай, lifetour, html academy, grading">
+    <meta name="author" content="Антон Богза">
+    <title>Lifetour</title>
+    <link rel="stylesheet" href="sass/style.scss">
+    <link rel="preload" href="fonts/montserrat-300.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-400.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-500.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-600.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-700.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-800.woff2" as="font" crossorigin="anonymous">
+  </head>
+
+  <body class="page__body">
+    <!-- пример использования спрайта -->
+<!--    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">-->
+<!--    <svg>-->
+<!--      <use href="/__spritemap#sprite-user"></use>-->
+<!--    </svg>-->
+
+    <header class="page__header header" data-test="header">
+      <button class="header__menu-button header__menu-button--closed" type="button">
+        <span class="visually-hidden">Открыть/Закрыть меню.</span>
+      </button>
+      <a class="header__logo" href="index.html">
+        <svg width="142" height="42" aria-label="Логотип компании Lifetour">
+          <use href="/__spritemap#logo"></use>
+        </svg>
+      </a>
+      <nav class="header__nav nav">
+        <ul class="nav__items">
+          <li class="nav_item">
+            <a class="nav__link" href="#">Туры</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav__link" href="#">Обучение</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav__link" href="#">О нас</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav__link" href="#">Отзывы</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav__link" href="#">Фотографии</a>
+          </li>
+          <li class="nav_item">
+            <a class="nav__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="header__phone"  href="tel:88000000000">8&nbsp;800&nbsp;000-00-00</a>
+    </header>
+    <main class="page__main">
+      <h1 class="visually-hidden">Путешествия по природе России</h1>
+      <section class="section hero" data-test="hero">
+        <h2 class="section__title juri__title">Жюри</h2>
+        <div class="hero__container">
+          <div class="hero__slider swiper">
+            <ul class="hero__items swiper-wrapper">
+              <li class="hero__item hero__item--сaucasus swiper-slide">
+                <h2>Захватывающие вершины Кавказа</h2>
+                <p>В сопровождении опытных гидов вы пройдёте через потрясающие ландшафты и совершите восход на вершину горы Чегет.</p>
+                <a class="hero__button button button--primary" href="#">Смотреть тур</a>
+                <ul class="hero__details">
+                  <li class="hero__detail hero__detail--period">
+                    <p>6 дней/5 ночей</p>
+                  </li>
+                  <li class="hero__detail hero__detail--complexity">
+                    <p>Высокая сложность</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="hero__item hero__item--kamchatka swiper-slide">
+                <h2>Невероятная природа Камчатки</h2>
+                <p>Незабываемое приключение, во время которого вы отправитесь в путешествие по одному из самых нетронутых уголков дикой природы в мире.</p>
+                <a class="hero__button button button--primary" href="#">Смотреть тур</a>
+                <ul class="hero__details">
+                  <li class="hero__detail hero__detail--period">
+                    <p>9 дней/10 ночей</p>
+                  </li>
+                  <li class="hero__detail hero__detail--complexity">
+                    <p>Средняя сложность</p>
+                  </li>
+                </ul>
+                <div class="hero__photo-wrapper">
+                  <div class="hero__photo hero__photo--top-side">
+                    <span class="visually-hidden">Фото путешественника</span>
+                  </div>
+                  <div class="hero__photo hero__photo--bottom-side">
+                    <span class="visually-hidden">Фото природы</span>
+                  </div>
+                </div>
+              </li>
+              <li class="hero__item hero__item--altai swiper-slide">
+                <h2>Магические пейзажи Алтайского Края</h2>
+                <p>Алтайский трекинг-тур — это захватывающее приключение с посещением магических и захватывающих дух ландшафтов Алтайских гор.</p>
+                <a class="hero__button button button--primary" href="#">Смотреть тур</a>
+                <ul class="hero__details">
+                  <li class="hero__detail hero__detail--period">
+                    <p>8 дней/7 ночей</p>
+                  </li>
+                  <li class="hero__detail hero__detail--complexity">
+                    <p>Лёгкая сложность</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="hero__pagination"></div>
+        </div>
+      </section>
+      <section class="section tours" data-test="tours">
+        <div class="tours__wrapper">
+          <div class="tours__header-wrapper">
+            <h2 data-title="Ближайшие туры" class="tours__header">Ближайшие туры</h2>
+            <div class="tours__pagination">
+              <button class="tours__pagination-button tours__pagination-button--prev button button--main">
+                <span class="visually-hidden">Предыдущий следующий слайд</span>
+              </button>
+              <button class="tours__pagination-button tours__pagination-button--next button button--main">
+                <span class="visually-hidden">Показать следующий слайд</span>
+              </button>
+            </div>
+            <div class="tours__slider swiper">
+              <ul class="tours__items swiper-wrapper">
+                <li class="tours__item swiper-slide">
+                  <div class="tours__image-wrapper">
+                    <picture>
+                      <img class="tours__image" src="img/tours/tour-1-mobile@1x.jpg" srcset="img/tours/tour-1-mobile@2x.jpg" width="290"
+                        height="416" alt="Изображение гор Кавказа">
+                    </picture>
+                  </div>
+                  <div class="tours__details-wrapper">
+                    <div class="tours__details">
+                      <div class="tours__trip-info">
+                        <p class="tours__place">
+                          Кавказ
+                        </p>
+                        <p class="tours__days">
+                          4 дня
+                        </p>
+                        <p class="tours__night">
+                          3 ночи
+                        </p>
+                      </div>
+                      <h3>Путешествие вокруг Эльбруса</h3>
+                      <div class="tours__additional-details">
+                        <div class="tours__difficulty trip-info">
+                          <p class="trip-info__title">Сложность:</p>
+                          <div class="tours__difficulty-rating rating rating--3">
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                          </div>
+                        </div>
+                        <div class="tours__trip-details-item trip-info">
+                          <p class="trip-info__title">Дата набора:</p>
+                          <p class="trip-info__detail">12.06–19.06</p>
+                        </div>
+                        <div class="tours__trip-details-item trip-info">
+                          <p class="trip-info__title">Группа:</p>
+                          <p class="trip-info__detail">до 15 чел.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tours__item swiper-slide">
+                  <div class="tours__image-wrapper">
+                    <picture>
+                      <img class="tours__image" src="img/tours/tour-2-mobile@1x.jpg" srcset="img/tours/tour-2-mobile@2x.jpg" width="290"
+                           height="416" alt="Изображение гор Алтая">
+                    </picture>
+                  </div>
+                  <div class="tours__details-wrapper">
+                    <div class="tours__details">
+                      <div class="tours__trip-info">
+                        <p class="tours__place">
+                          Алтай
+                        </p>
+                        <p class="tours__days">
+                          14 дней
+                        </p>
+                        <p class="tours__night">
+                          13 ночей
+                        </p>
+                      </div>
+                      <h3>Путь к подножию Белухи</h3>
+                      <div class="tours__additional-details">
+                        <div class="tours__difficulty trip-info">
+                          <p class="trip-info__title">Сложность:</p>
+                          <div class="tours__difficulty-rating rating rating--4">
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                          </div>
+                        </div>
+                        <div class="tours__trip-details-item trip-info">
+                          <p class="trip-info__title">Дата набора:</p>
+                          <p class="trip-info__detail">14.06–23.06</p>
+                        </div>
+                        <div class="tours__trip-details-item trip-info">
+                          <p class="trip-info__title">Группа:</p>
+                          <p class="trip-info__detail">до 25 чел.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tours__item swiper-slide">
+                  <div class="tours__image-wrapper">
+                    <picture>
+                      <img class="tours__image" src="img/tours/tour-3-mobile@1x.jpg" srcset="img/tours/tour-3-mobile@2x.jpg" width="290"
+                           height="416" alt="Изображение гор Адыгеи">
+                    </picture>
+                  </div>
+                  <div class="tours__details-wrapper">
+                    <div class="tours__details">
+                      <div class="tours__trip-info">
+                        <p class="tours__place">
+                          Адыгея
+                        </p>
+                        <p class="tours__days">
+                          7 дней
+                        </p>
+                        <p class="tours__night">
+                          6 ночей
+                        </p>
+                      </div>
+                      <h3>Через Фишт к Чёрному морю и обратно</h3>
+                      <div class="tours__additional-details">
+                        <div class="tours__difficulty trip-info">
+                          <p class="trip-info__title">Сложность:</p>
+                          <div class="tours__difficulty-rating rating rating--4">
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                          </div>
+                        </div>
+                        <div class="tours__trip-details-item trip-info">
+                          <p class="trip-info__title">Дата набора:</p>
+                          <p class="trip-info__detail">15.07–19.07</p>
+                        </div>
+                        <div class="tours__trip-details-item trip-info">
+                          <p class="trip-info__title">Группа:</p>
+                          <p class="trip-info__detail">до 22 чел.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="tours__item swiper-slide">
+                  <div class="tours__image-wrapper">
+                    <picture>
+                      <img class="tours__image" src="img/tours/tour-4-mobile@1x.jpg" srcset="img/tours/tour-4-mobile@2x.jpg" width="290"
+                           height="416" alt="Изображение гор Урала">
+                    </picture>
+                  </div>
+                  <div class="tours__details-wrapper">
+                    <div class="tours__details">
+                      <div class="tours__trip-info">
+                        <p class="tours__place">
+                          Урал
+                        </p>
+                        <p class="tours__days">
+                          9 дней
+                        </p>
+                        <p class="tours__night">
+                          10 ночей
+                        </p>
+                      </div>
+                      <h3>Восхождение Манарага</h3>
+                      <div class="tours__additional-details">
+                        <div class="tours__difficulty trip-info">
+                          <p class="trip-info__title">Сложность:</p>
+                          <div class="tours__difficulty-rating rating rating--5">
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                            <div class="rating__icon"></div>
+                          </div>
+                        </div>
+                        <div class="tours__trip-details-item trip-info">
+                          <p class="trip-info__title">Дата набора:</p>
+                          <p class="trip-info__detail">12.07–19.07</p>
+                        </div>
+                        <div class="tours__trip-details-item trip-info">
+                          <p class="trip-info__title">Группа:</p>
+                          <p class="trip-info__detail">до 7 чел.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <a class="tours_link">
+              Показать все туры
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section training" data-test="training">training</section>
+      <section class="section about" data-test="about">about</section>
+      <section class="section reviews" data-test="reviews">reviews</section>
+      <section class="section adv" data-test="adv">adv</section>
+      <section class="section gallery" data-test="gallery">gallery</section>
+      <section class="section form" data-test="form">form</section>
+    </main>
+    <footer class="page__footer" data-test="footer">
+
+    </footer>
+    <script type="module" src="js/main.js"></script>
+  </body>
+
+</html>

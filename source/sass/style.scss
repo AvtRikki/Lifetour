@@ -1,0 +1,13 @@
+/* VENDOR */
+@import "vendor/normalize";
+
+
+/* GLOBAL */
+@import "./common/variables";
+@import "./common/mixins";
+@import "./common/global";
+@import "./common/fonts";
+@import "./common/visually-hidden";
+
+/* BLOCKS */
+@import "./blocks/page";
