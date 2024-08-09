@@ -28,8 +28,8 @@
   }
 }
 
-@mixin font-info($font-family, $font-size, $line-height, $font-weight: 400) {
-  font-family: $font-family;
+@mixin font-info($font-size, $line-height, $font-weight: 400) {
+  font-family: variables.$font-primary;
   font-size: $font-size;
   line-height: $line-height;
   font-style: normal;
