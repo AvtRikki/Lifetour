@@ -1,2 +1,44 @@
 @use "../common/variables.scss";
 @use "../common/mixins.scss";
+
+.page {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.page__body {
+  @include mixins.font-info(14px, 20px);
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: variables.$background-color-primary;
+  color: variables.$font-color-primary;
+}
+
+.page__container {
+  min-width: variables.$view-port-mobile;
+  width: 100%;
+  max-width: variables.$view-port-desktop-wide;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.page__header {
+  position: relative;
+}
+
+.page__header:before {
+  @include mixins.font-info(26px, 26px, 800);
+
+  content: attr(data-title);
+  width: max-content;
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  opacity: .03;
+}

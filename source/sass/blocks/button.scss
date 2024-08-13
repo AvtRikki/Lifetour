@@ -1,0 +1,36 @@
+@use "../common/variables.scss";
+@use "../common/mixins.scss";
+
+.button {
+  @include mixins.font-info(16px, 16px, 500);
+
+  display: block;
+  text-decoration: none;
+  background-color: variables.$button-color-primary;
+  color: variables.$font-color-accent;
+  width: fit-content;
+  text-align: center;
+  border: 1px solid transparent;
+
+  &:hover {
+    color: variables.$font-color-active;
+    background-color: variables.$button-color-secondary;
+    border-color: variables.$font-color-active;
+  }
+
+  &:focus {
+    color: variables.$font-color-active;
+    background-color: variables.$button-color-secondary;
+    border-color: variables.$transparent-color;
+  }
+
+  &:active {
+    color: variables.$font-color-accent;
+    background-color: variables.$font-color-active;
+  }
+
+  &:disabled {
+    color: variables.$font-color-accent;
+    background-color: variables.$font-color-disabled;
+  }
+}

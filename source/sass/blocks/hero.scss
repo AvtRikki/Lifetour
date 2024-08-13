@@ -1,2 +1,107 @@
 @use "../common/variables.scss";
 @use "../common/mixins.scss";
+
+.hero {
+  background-color: variables.$background-color-secondary;
+  color: variables.$font-color-accent;
+}
+
+.hero__items {
+  @include mixins.list-base;
+}
+
+.hero__item {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 15px;
+}
+
+.hero__item--сaucasus {
+  background-image:
+    image-set(
+        "../img/hero/hero-1-mobile@1x.webp" type("image/webp"),
+        "../img/hero/hero-1-mobile@1x.jpg" type("image/jpeg")
+    );
+
+  @media (resolution >= 2dppx) {
+    background-image:
+      image-set(
+          "../img/hero/hero-1-mobile@2x.webp" type("image/webp"),
+          "../img/hero/hero-1-mobile@2x.png" type("image/png")
+      );
+  }
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__item--kamchatka {
+  background-image:
+    image-set(
+        "../img/hero/hero-2-mobile@1x.webp" type("image/webp"),
+        "../img/hero/hero-2-mobile@1x.jpg" type("image/jpeg")
+    );
+
+  @media (resolution >= 2dppx) {
+    background-image:
+      image-set(
+          "../img/hero/hero-2-mobile@2x.webp" type("image/webp"),
+          "../img/hero/hero-2-mobile@2x.png" type("image/png")
+      );
+  }
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__item--altai {
+  background-image:
+    image-set(
+        "../img/hero/hero-3-mobile@1x.webp" type("image/webp"),
+        "../img/hero/hero-3-mobile@1x.jpg" type("image/jpeg")
+    );
+
+  @media (resolution >= 2dppx) {
+    background-image:
+      image-set(
+          "../img/hero/hero-3-mobile@2x.webp" type("image/webp"),
+          "../img/hero/hero-3-mobile@2x.png" type("image/png")
+      );
+  }
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__item-wrapper {
+  min-height: 472px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    @include mixins.font-info(26px, 26px, 800);
+
+    text-align: center;
+    margin: 0 0 15px;
+    padding: 0;
+  }
+
+  p {
+    @include mixins.font-info(15px, 20px);
+
+    text-align: center;
+    margin: 0 0 60px;
+  }
+}
+
+.hero__button {
+  min-width: 180px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero__details {
+  display: none;
+}

@@ -1,0 +1,29 @@
+@use "../common/variables.scss";
+@use "../common/mixins.scss";
+
+.nav {
+  display: none;
+  position: absolute;
+  padding: 15px 15px 60px;
+  background-color: variables.$background-color-secondary;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.nav__items {
+  @include mixins.list-base;
+
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.nav__link {
+  @include mixins.font-info(14px, 14px, 700);
+
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: inherit;
+}

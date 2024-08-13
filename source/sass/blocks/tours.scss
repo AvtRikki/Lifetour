@@ -1,2 +1,26 @@
 @use "../common/variables.scss";
 @use "../common/mixins.scss";
+
+.tours__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.tours__header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.tours__header {
+  @include mixins.font-info(22px, 22px, 800);
+  margin: 0;
+}
+
+//.tours__pagination {
+//  display: none;
+//}
+
+.tours__items {
+  @include mixins.list-base;
+}

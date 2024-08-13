@@ -1,2 +1,140 @@
 @use "../common/variables.scss";
 @use "../common/mixins.scss";
+
+.header {
+  background-color: variables.$background-color-secondary;
+  color: variables.$font-color-accent;
+}
+
+.header__container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 26px 1fr 142px;
+  row-gap: 12px;
+  align-items: start;
+}
+
+.header__menu-button {
+  display: block;
+  background-color: variables.$transparent-color;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  min-width: 26px;
+  min-height: 26px;
+  color: inherit;
+
+  &:hover {
+    color: rgba(variables.$font-color-accent, 0.5);
+  }
+
+  &:focus {
+    color: variables.$font-color-primary;
+  }
+
+  &:active {
+    color: variables.$font-color-active;
+  }
+
+  &:disabled {
+    color: variables.$font-color-disabled;
+  }
+}
+
+.header__menu-button--closed {
+  mask: url("/__spritemap#sprite-menu-view") center center no-repeat;
+  background-color: variables.$font-color-accent;
+
+  &:hover {
+    background-color: rgba(variables.$font-color-accent, 0.5);
+  }
+
+  &:focus {
+    background-color: variables.$font-color-primary;
+  }
+
+  &:active {
+    background-color: variables.$font-color-active;
+  }
+
+  &:disabled {
+    background-color: variables.$font-color-disabled;
+  }
+}
+
+.header__menu-button--opened {
+  mask: url("/__spritemap#sprite-cross-view") center center no-repeat;
+  background-color: variables.$font-color-accent;
+
+  &:hover {
+    background-color: rgba(variables.$font-color-accent, 0.5);
+  }
+
+  &:focus {
+    background-color: variables.$font-color-primary;
+  }
+
+  &:active {
+    background-color: variables.$font-color-active;
+  }
+
+  &:disabled {
+    background-color: variables.$font-color-disabled;
+  }
+}
+
+.header__logo {
+  color: inherit;
+  grid-column: 3/-1;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba(variables.$font-color-accent, 0.5);
+  }
+
+  &:focus {
+    color: variables.$font-color-primary;
+  }
+
+  &:active {
+    color: variables.$font-color-active;
+  }
+
+  &:disabled {
+    color: variables.$font-color-disabled;
+  }
+}
+
+.header__phone {
+  @include mixins.font-info(14px, 16px, 600);
+
+  cursor: pointer;
+  text-align: right;
+  color: inherit;
+  grid-column: 3/-1;
+  text-decoration: none;
+
+  &:hover {
+    color: rgba(variables.$font-color-accent, 0.5);
+  }
+
+  &:focus {
+    color: variables.$font-color-primary;
+  }
+
+  &:active {
+    color: variables.$font-color-active;
+  }
+
+  &:disabled {
+    color: variables.$font-color-disabled;
+  }
+}
+
+.header__menu-button--closed + .header__nav {
+  display: none;
+}
+
+.header__menu-button--opened + .header__nav {
+  display: flex;
+}
