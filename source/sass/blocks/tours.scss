@@ -2,8 +2,7 @@
 @use "../common/mixins.scss";
 
 .tours__wrapper {
-  display: flex;
-  flex-direction: column;
+  padding-top: 36px;
 }
 
 .tours__header-wrapper {
@@ -17,10 +16,169 @@
   margin: 0;
 }
 
-//.tours__pagination {
-//  display: none;
-//}
+.tours__pagination {
+  display: none;
+}
 
 .tours__items {
   @include mixins.list-base;
+}
+
+.tours__item {
+  position: relative;
+}
+
+.tours__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.tours__details-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  color: variables.$font-color-accent;
+  padding: 20px;
+}
+
+.tours__info {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+
+.tours__info-item {
+  @include mixins.font-info(12px, 12px, 500);
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    aspect-ratio: 1;
+    background-color: variables.$font-color-accent;
+  }
+}
+
+.tours__info-item--place {
+  position: relative;
+  margin: 0;
+  padding: 8px 12px 8px 34px;
+
+  &:before {
+    left: 12px;
+    width: 16px;
+    mask: url("/__spritemap#sprite-pin-filled-view");
+  }
+
+  &:hover::before {
+    background-color:  variables.$font-color-active;
+  }
+
+  &:focus::before {
+    background-color: variables.$font-color-active;
+  }
+
+  &:active::before {
+    background-color: variables.$font-color-accent;
+  }
+
+  &:disabled::before {
+    background-color: variables.$font-color-accent;
+  }
+}
+
+.tours__info-item--days {
+  position: relative;
+  margin: 0;
+  padding: 8px 0 8px 32px;
+
+  &:before {
+    left: 0;
+    width: 20px;
+    mask: url("/__spritemap#sprite-sun-view");
+  }
+}
+
+.tours__info-item--night {
+  position: relative;
+  margin: 0;
+  padding: 8px 0 8px 32px;
+
+  &:before {
+    left: 0;
+    width: 20px;
+    mask: url("/__spritemap#sprite-moon-view");
+  }
+}
+
+.tours__title {
+  @include mixins.font-info(24px, 28px, 700);
+
+  margin: 15px 0;
+}
+
+.tours__additional-details {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.tours__slider {
+  margin-bottom: 25px;
+}
+
+.tours__actions-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.tours_link {
+  @include mixins.font-info(14px, 14px, 700);
+
+  position: relative;
+  color: inherit;
+  letter-spacing: 0.04em;
+  padding-right: 28px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 10px;
+    width: 9px;
+    height: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    mask: url("/__spritemap#sprite-chevron-view");
+    background-color: variables.$font-color-primary;
+  }
+
+  &:hover::after {
+    background-color: rgba(variables.$button-color-primary, 0.1);
+  }
+
+  &:focus::after {
+    background-color: variables.$button-color-primary;
+  }
+
+  &:active::after {
+    background-color: variables.$font-color-active;
+  }
+
+  &:disabled::after {
+    background-color: variables.$font-color-disabled;
+  }
 }

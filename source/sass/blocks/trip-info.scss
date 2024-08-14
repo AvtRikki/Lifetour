@@ -1,0 +1,14 @@
+@use "../common/variables.scss";
+@use "../common/mixins.scss";
+
+.trip-info__title {
+  @include mixins.font-info(12px, 12px, 300);
+
+  margin-bottom: 4px;
+}
+
+.trip-info__detail {
+  @include mixins.font-info(13px, 13px, 700);
+
+  margin: 0;
+}

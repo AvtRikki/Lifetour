@@ -14,6 +14,14 @@
   align-items: start;
 }
 
+.header__menu-button--closed::before {
+  mask: url("/__spritemap#sprite-menu-view") center center no-repeat;
+}
+
+.header__menu-button--opened::before {
+  mask: url("/__spritemap#sprite-cross-view") center center no-repeat;
+}
+
 .header__menu-button {
   display: block;
   background-color: variables.$transparent-color;
@@ -24,61 +32,26 @@
   min-height: 26px;
   color: inherit;
 
-  &:hover {
-    color: rgba(variables.$font-color-accent, 0.5);
+  &::before {
+    content: "";
+    display: block;
+    aspect-ratio: 1;
+    background-color: variables.$font-color-accent;
   }
 
-  &:focus {
-    color: variables.$font-color-primary;
-  }
-
-  &:active {
-    color: variables.$font-color-active;
-  }
-
-  &:disabled {
-    color: variables.$font-color-disabled;
-  }
-}
-
-.header__menu-button--closed {
-  mask: url("/__spritemap#sprite-menu-view") center center no-repeat;
-  background-color: variables.$font-color-accent;
-
-  &:hover {
+  &:hover::before {
     background-color: rgba(variables.$font-color-accent, 0.5);
   }
 
-  &:focus {
+  &:focus::before {
     background-color: variables.$font-color-primary;
   }
 
-  &:active {
+  &:active::before {
     background-color: variables.$font-color-active;
   }
 
-  &:disabled {
-    background-color: variables.$font-color-disabled;
-  }
-}
-
-.header__menu-button--opened {
-  mask: url("/__spritemap#sprite-cross-view") center center no-repeat;
-  background-color: variables.$font-color-accent;
-
-  &:hover {
-    background-color: rgba(variables.$font-color-accent, 0.5);
-  }
-
-  &:focus {
-    background-color: variables.$font-color-primary;
-  }
-
-  &:active {
-    background-color: variables.$font-color-active;
-  }
-
-  &:disabled {
+  &:disabled::before {
     background-color: variables.$font-color-disabled;
   }
 }

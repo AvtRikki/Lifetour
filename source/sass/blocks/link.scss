@@ -1,0 +1,25 @@
+@use "../common/variables.scss";
+@use "../common/mixins.scss";
+
+.link {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: variables.$font-primary;
+
+  &:hover {
+    color: rgba(variables.$button-color-primary, 0.1);
+  }
+
+  &:focus {
+    color: variables.$button-color-primary;
+  }
+
+  &:active {
+    color: variables.$font-color-active;
+  }
+
+  &:disabled {
+    color: variables.$font-color-disabled;
+  }
+}

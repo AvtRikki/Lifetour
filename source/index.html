@@ -126,10 +126,10 @@
           <div class="tours__header-wrapper">
             <h2 data-title="Ближайшие туры" class="page__header tours__header">Ближайшие туры</h2>
             <div class="tours__pagination">
-              <button class="tours__pagination-button-prev button button--main button--prev">
+              <button class="tours__pagination-button-prev button button--main button--prev" type="button">
                 <span class="visually-hidden">Предыдущий следующий слайд</span>
               </button>
-              <button class="tours__pagination-button-next button button--main button--next">
+              <button class="tours__pagination-button-next button button--main button--next" type="button">
                 <span class="visually-hidden">Показать следующий слайд</span>
               </button>
             </div>
@@ -155,22 +155,23 @@
                 </div>
                 <div class="tours__details-wrapper">
                   <div class="tours__details">
-                    <div class="tours__trip-info">
-                      <p class="tours__place">
+                    <div class="tours__info">
+                      <a href="#" class="tours__info-item tours__info-item--place button button--primary">
                         Кавказ
-                      </p>
-                      <p class="tours__days">
+                      </a>
+                      <p class="tours__info-item tours__info-item--days">
                         4 дня
                       </p>
-                      <p class="tours__night">
+                      <p class="tours__info-item tours__info-item--night">
                         3 ночи
                       </p>
                     </div>
-                    <h3>Путешествие вокруг Эльбруса</h3>
+                    <h3 class="tours__title">Путешествие<br>вокруг Эльбруса</h3>
                     <div class="tours__additional-details">
                       <div class="tours__difficulty trip-info">
                         <p class="trip-info__title">Сложность:</p>
-                        <div class="tours__difficulty-rating rating rating--3">
+                        <div class="tours__difficulty-rating rating rating--4">
+                          <span class="visually-hidden">Количество звезд 4.</span>
                           <div class="rating__icon"></div>
                           <div class="rating__icon"></div>
                           <div class="rating__icon"></div>
@@ -209,22 +210,23 @@
                 </div>
                 <div class="tours__details-wrapper">
                   <div class="tours__details">
-                    <div class="tours__trip-info">
-                      <p class="tours__place">
+                    <div class="tours__info">
+                      <a href="#" class="tours__info-item tours__info-item--place button button--primary">
                         Алтай
-                      </p>
-                      <p class="tours__days">
+                      </a>
+                      <p class="tours__info-item tours__info-item--days">
                         14 дней
                       </p>
-                      <p class="tours__night">
+                      <p class="tours__info-item tours__info-item--night">
                         13 ночей
                       </p>
                     </div>
-                    <h3>Путь к подножию Белухи</h3>
+                    <h3 class="tours__title">Путь к подножию Белухи</h3>
                     <div class="tours__additional-details">
                       <div class="tours__difficulty trip-info">
                         <p class="trip-info__title">Сложность:</p>
-                        <div class="tours__difficulty-rating rating rating--4">
+                        <div class="tours__difficulty-rating rating rating--3">
+                          <span class="visually-hidden">Количество звезд 3.</span>
                           <div class="rating__icon"></div>
                           <div class="rating__icon"></div>
                           <div class="rating__icon"></div>
@@ -263,22 +265,23 @@
                 </div>
                 <div class="tours__details-wrapper">
                   <div class="tours__details">
-                    <div class="tours__trip-info">
-                      <p class="tours__place">
+                    <div class="tours__info">
+                      <a href="#" class="tours__info-item tours__info-item--place button button--primary">
                         Адыгея
-                      </p>
-                      <p class="tours__days">
+                      </a>
+                      <p class="tours__info-item tours__info-item--days">
                         7 дней
                       </p>
-                      <p class="tours__night">
+                      <p class="tours__info-item tours__info-item--night">
                         6 ночей
                       </p>
                     </div>
-                    <h3>Через Фишт к Чёрному морю и обратно</h3>
+                    <h3 class="tours__title">Через Фишт к Чёрному морю и обратно</h3>
                     <div class="tours__additional-details">
                       <div class="tours__difficulty trip-info">
                         <p class="trip-info__title">Сложность:</p>
                         <div class="tours__difficulty-rating rating rating--4">
+                          <span class="visually-hidden">Количество звезд 4.</span>
                           <div class="rating__icon"></div>
                           <div class="rating__icon"></div>
                           <div class="rating__icon"></div>
@@ -317,18 +320,18 @@
                 </div>
                 <div class="tours__details-wrapper">
                   <div class="tours__details">
-                    <div class="tours__trip-info">
-                      <p class="tours__place">
+                    <div class="tours__info">
+                      <a href="#" class="tours__info-item tours__info-item--place button button--primary">
                         Урал
-                      </p>
-                      <p class="tours__days">
+                      </a>
+                      <p class="tours__info-item tours__info-item--days">
                         9 дней
                       </p>
-                      <p class="tours__night">
+                      <p class="tours__info-item tours__info-item--night">
                         10 ночей
                       </p>
                     </div>
-                    <h3>Восхождение Манарага</h3>
+                    <h3 class="tours__title">Восхождение Манарага</h3>
                     <div class="tours__additional-details">
                       <div class="tours__difficulty trip-info">
                         <p class="trip-info__title">Сложность:</p>
@@ -354,9 +357,11 @@
               </li>
             </ul>
           </div>
-          <a class="tours_link" href="#">
-            Показать все туры
-          </a>
+          <div class="tours__actions-wrapper">
+            <a class="tours_link link" href="#">
+              Показать все туры
+            </a>
+          </div>
         </div>
       </section>
       <section class="section training" data-test="training">

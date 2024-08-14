@@ -9,6 +9,7 @@
   top: 100%;
   left: 0;
   right: 0;
+  z-index: 10;
 }
 
 .nav__items {
@@ -22,8 +23,27 @@
 .nav__link {
   @include mixins.font-info(14px, 14px, 700);
 
+  display: inline-block;
+  padding: 3px 5px;
+  border: 1px solid variables.$transparent-color;
   letter-spacing: 0.04em;
   text-decoration: none;
   text-transform: uppercase;
   color: inherit;
+
+  &:hover {
+    border-bottom-color: variables.$font-color-accent;
+  }
+
+  &:focus {
+    border-color: variables.$font-color-accent;
+  }
+
+  &:active {
+    color: variables.$font-color-active;
+  }
+
+  &:disabled {
+    color: variables.$font-color-disabled;
+  }
 }

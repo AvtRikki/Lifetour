@@ -1,0 +1,23 @@
+@use "../common/variables.scss";
+@use "../common/mixins.scss";
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.rating__icon {
+  background-image: url("/__spritemap#sprite-star-filled-view");
+  background-position: left top;
+  width: 16px;
+  aspect-ratio: 1;
+}
+
+.rating--1 .rating__icon:nth-child(n+3),
+.rating--2 .rating__icon:nth-child(n+4),
+.rating--3 .rating__icon:nth-child(n+5),
+.rating--4 .rating__icon:nth-child(n+6),
+.rating--5 .rating__icon:nth-child(n+7) {
+  background-image: url("/__spritemap#sprite-star-stroke-view");
+}
