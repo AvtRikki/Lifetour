@@ -1,2 +1,29 @@
 @use "../common/variables.scss";
 @use "../common/mixins.scss";
+
+.reviews__header {
+  margin-bottom: 32px;
+}
+
+.reviews__pagination {
+  display: none;
+}
+
+.reviews__items {
+  @include mixins.list-base;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+}
+
+.reviews__item {
+  flex: 1;
+  display: block;
+  height: 100%;
+  border: 1px solid variables.$background-color-primary;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px 0 rgba(variables.$background-color-alternative, 0.1);
+}

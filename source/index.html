@@ -118,7 +118,7 @@
               </li>
             </ul>
           </div>
-          <div class="hero__pagination"></div>
+          <div class="hero__pagination" data-pagination="hero"></div>
         </div>
       </section>
       <section class="section tours" data-test="tours">
@@ -365,16 +365,16 @@
         </div>
       </section>
       <section class="section training" data-test="training">
-        <div class="training__wrapper">
-          <h2 data-title="Ближайшие туры" class="training__header">Обучение</h2>
+        <div class="page__container training__wrapper">
+          <h2 data-title="Обучение" class="page__header training__header">Обучение</h2>
           <p>Обучение проводится квалифицированными специалистами, за плечами которых десятки пройденных маршрутов Кавказа, Крыма, Гималаев, Эльбруса, Алтая, Карелии, Адыгеи и других.</p>
           <div class="training__subheader-wrapper">
-            <h3>Наши инструкторы</h3>
+            <h3 class="training__subheader">Наши инструкторы</h3>
             <div class="training__pagination">
-              <button class="training__pagination-button button button--main button--prev">
+              <button class="training__pagination-button-prev button button--main button--prev">
                 <span class="visually-hidden">Предыдущий следующий слайд</span>
               </button>
-              <button class="training__pagination-button button button--main button--next">
+              <button class="training__pagination-button-next button button--main button--next">
                 <span class="visually-hidden">Показать следующий слайд</span>
               </button>
             </div>
@@ -399,7 +399,7 @@
                   </picture>
                 </div>
                 <div class="training__details">
-                  <a class="training__socials" href="#">
+                  <a class="training__socials link link--social" href="#">
                     <span class="visually-hidden">Социальная сеть Вконтакте</span>
                   </a>
                   <h4>Александр Прокофьев</h4>
@@ -424,7 +424,7 @@
                   </picture>
                 </div>
                 <div class="training__details">
-                  <a class="training__socials" href="#">
+                  <a class="training__socials link link--social" href="#">
                     <span class="visually-hidden">Социальная сеть Вконтакте</span>
                   </a>
                   <h4>Светлана Афиногенова</h4>
@@ -449,7 +449,7 @@
                   </picture>
                 </div>
                 <div class="training__details">
-                  <a class="training__socials" href="#">
+                  <a class="training__socials link link--social" href="#">
                     <span class="visually-hidden">Социальная сеть Вконтакте</span>
                   </a>
                   <h4>Надежда Колесниченко</h4>
@@ -474,7 +474,7 @@
                   </picture>
                 </div>
                 <div class="training__details">
-                  <a class="training__socials" href="#">
+                  <a class="training__socials link link--social" href="#">
                     <span class="visually-hidden">Социальная сеть Вконтакте</span>
                   </a>
                   <h4>Федор Кайгородов</h4>
@@ -499,7 +499,7 @@
                   </picture>
                 </div>
                 <div class="training__details">
-                  <a class="training__socials" href="#">
+                  <a class="training__socials link link--social" href="#">
                     <span class="visually-hidden">Социальная сеть Вконтакте</span>
                   </a>
                   <h4>Даниэль Васнецов</h4>
@@ -508,19 +508,19 @@
               </li>
             </ul>
           </div>
-          <h3>Процесс обучения</h3>
-          <ul class="training__process">
-            <li class="training__process-item">
-              <p class="training__process-title training__process-title--map">Изучение спортивного туристского движения</p>
+          <h3 class="training__process-header">Процесс обучения</h3>
+          <ul class="training__process-items">
+            <li class="training__process-item training__process-item--map">
+              <p class="training__process-title">Изучение спортивного туристского движения</p>
             </li>
-            <li class="training__process-item">
-              <p class="training__process-title training__process-title--boot">Подготовка и техническое снаряжение в походах</p>
+            <li class="training__process-item training__process-item--boot">
+              <p class="training__process-title">Подготовка и техническое снаряжение в походах</p>
             </li>
-            <li class="training__process-item">
-              <p class="training__process-title training__process-title--forest">Лекции по окружающей среде, экологии и гигиене</p>
+            <li class="training__process-item training__process-item--forest">
+              <p class="training__process-title">Лекции по окружающей среде, экологии и гигиене</p>
             </li>
-            <li class="training__process-item">
-              <p class="training__process-title training__process-title--mountains">Разъяснение сложности горных препятствий</p>
+            <li class="training__process-item training__process-item--mountains">
+              <p class="training__process-title">Разъяснение сложности горных препятствий</p>
             </li>
           </ul>
         </div>
@@ -553,14 +553,14 @@
         </div>
       </section>
       <section class="section reviews" data-test="reviews">
-        <div class="reviews__wrapper">
+        <div class="page__container reviews__wrapper">
           <div class="reviews__header-wrapper">
-            <h2 data-title="Отзывы">Отзывы</h2>
+            <h2 data-title="Отзывы" class="page__header reviews__header">Отзывы</h2>
             <div class="reviews__pagination">
-              <button class="reviews__pagination-button button button--main button--prev">
+              <button class="reviews__pagination-button-prev button button--main button--prev">
                 <span class="visually-hidden">Предыдущий следующий слайд</span>
               </button>
-              <button class="reviews__pagination-button button button--main button--next">
+              <button class="reviews__pagination-button-next button button--main button--next">
                 <span class="visually-hidden">Показать следующий слайд</span>
               </button>
             </div>

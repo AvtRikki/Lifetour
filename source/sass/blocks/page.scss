@@ -29,6 +29,9 @@
 }
 
 .page__header {
+  @include mixins.font-info(22px, 22px, 800);
+
+  margin: 0;
   position: relative;
 }
 

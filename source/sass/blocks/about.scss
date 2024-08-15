@@ -1,2 +1,44 @@
 @use "../common/variables.scss";
 @use "../common/mixins.scss";
+
+.about__wrapper {
+  padding: 20px 0;
+}
+
+.about__info {
+  padding: 0 15px;
+
+  & h2 {
+    @include mixins.font-info(22px, 22px, 800);
+
+    margin: 0 0 42px;
+    position: relative;
+  }
+
+  & h2:before {
+    @include mixins.font-info(26px, 26px, 800);
+
+    content: attr(data-title);
+    width: max-content;
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    opacity: .03;
+  }
+
+  h3 {
+    @include mixins.font-info(16px, 16px, 700);
+    margin: 0 0 15px;
+  }
+
+  p {
+    @include mixins.font-info(14px, 20px);
+
+    margin: 0 0 25px;
+  }
+
+  p:last-child {
+    margin: 0;
+  }
+
+}

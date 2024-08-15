@@ -55,6 +55,11 @@ export class SwiperInitializer {
     return {
       slidesPerView: 1,
       loop: true,
+      pagination: {
+        el: '[data-pagination="hero"]',
+        type: 'bullets',
+        clickable: true
+      },
       breakpoints: {
         320: {
           allowTouchMove: true,
@@ -69,7 +74,7 @@ export class SwiperInitializer {
     };
   }
 
-  createToursOptions(nextSlideClassName, prevSlideClassName) {
+  createToursOptions(prevSlideClassName, nextSlideClassName) {
     return {
       navigation: {
         nextEl: `.${nextSlideClassName}`,
@@ -80,6 +85,57 @@ export class SwiperInitializer {
         320: {
           allowTouchMove: true,
           slidesPerView: 1,
+        },
+        768: {
+          allowTouchMove: true,
+          slidesPerView: 2,
+        },
+        1440: {
+          allowTouchMove: false,
+          slidesPerView: 3,
+        },
+      },
+    };
+  }
+
+  createTrainingOptions(prevSlideClassName, nextSlideClassName) {
+    return {
+      navigation: {
+        nextEl: `.${nextSlideClassName}`,
+        prevEl: `.${prevSlideClassName}`,
+      },
+      loop: false,
+      breakpoints: {
+        320: {
+          allowTouchMove: true,
+          slidesPerView: 1,
+          initialSlide: 2,
+        },
+        768: {
+          allowTouchMove: true,
+          slidesPerView: 2,
+        },
+        1440: {
+          allowTouchMove: false,
+          slidesPerView: 3,
+        },
+      },
+    };
+  }
+
+  createReviewsOptions(prevSlideClassName, nextSlideClassName) {
+    return {
+      navigation: {
+        nextEl: `.${nextSlideClassName}`,
+        prevEl: `.${prevSlideClassName}`,
+      },
+      loop: false,
+      spaceBetween: 20,
+      breakpoints: {
+        320: {
+          allowTouchMove: true,
+          slidesPerView: 1,
+
         },
         768: {
           allowTouchMove: true,

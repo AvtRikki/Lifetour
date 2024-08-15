@@ -6,6 +6,10 @@
   color: variables.$font-color-accent;
 }
 
+.hero__container {
+  position: relative;
+}
+
 .hero__items {
   @include mixins.list-base;
 }
@@ -104,4 +108,26 @@
 
 .hero__details {
   display: none;
+}
+
+.hero__pagination {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  z-index: 3;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  & span {
+    width: 16px;
+    height: 16px;
+    border: 1px solid variables.$button-color-secondary;
+    border-radius: 50%;
+    transition: background .5s ease;
+  }
+
+  & span[aria-current="true"] {
+    background: variables.$button-color-secondary;
+  }
 }

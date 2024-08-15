@@ -5,7 +5,7 @@
   display: block;
   text-transform: uppercase;
   text-decoration: none;
-  color: variables.$font-primary;
+  color: variables.$font-color-primary;
 
   &:hover {
     color: rgba(variables.$button-color-primary, 0.1);
@@ -23,3 +23,25 @@
     color: variables.$font-color-disabled;
   }
 }
+
+.link--social {
+  border: 1px solid rgba(variables.$icons-color-primary, 0.3);
+
+  &:hover {
+    border-color: variables.$icons-color-primary;
+  }
+
+  &:focus {
+    border-color: variables.$transparent-color;
+  }
+
+  &:active {
+    background-color: variables.$icons-color-secondary;
+  }
+
+  &:disabled {
+    border-color: variables.$icons-color-primary;
+    opacity: 0.3;
+  }
+}
+

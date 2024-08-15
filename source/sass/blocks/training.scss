@@ -1,2 +1,160 @@
 @use "../common/variables.scss";
 @use "../common/mixins.scss";
+
+.training__wrapper {
+  padding-top: 36px;
+}
+
+.training__header {
+  margin-bottom: 18px;
+}
+
+.training__header + p {
+  @include mixins.font-info(14px, 20px);
+
+  margin: 0 0 25px;
+}
+
+.training__subheader {
+  @include mixins.font-info(22px, 22px, 800);
+
+  margin: 0;
+}
+
+.training__pagination {
+  display: none;
+}
+
+.training__subheader-wrapper {
+  margin-bottom: 25px;
+}
+
+
+.training__items {
+  @include mixins.list-base;
+
+  margin-bottom: 15px;
+}
+
+.training__item {
+  border: 1px solid rgba(variables.$background-color-secondary, 0.1);
+  padding: 15px;
+}
+
+.training__details {
+  display: grid;
+  grid-template-columns: 1fr 24px;
+  padding-top: 15px;
+
+  & h4 {
+    @include mixins.font-info(14px, 16px, 700);
+
+    display: inline-block;
+    max-width: 100px;
+    margin: 0 0 15px;
+    grid-column: 1/2;
+
+  }
+
+  & p {
+    @include mixins.font-info(12px, 16px);
+
+    margin: 0;
+    grid-column: 1/-1;
+    order: 2;
+  }
+}
+
+.training__socials {
+  position: relative;
+  grid-column: 2/3;
+  width: 24px;
+  height: 24px;
+  order: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: flex;
+    width: 14px;
+    height: 8px;
+    top: 7px;
+    left: 4px;
+    mask: url("/__spritemap#sprite-vk-view") center center no-repeat;
+    background-color: variables.$font-color-primary;
+  }
+
+  &:active::before {
+    background-color: variables.$icons-color-accent;
+  }
+}
+
+.training__process-header {
+  @include mixins.font-info(16px, 16px, 700);
+
+  margin: 0 0 25px;
+}
+
+.training__process-items {
+  @include mixins.list-base;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 5px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    bottom: 18px;
+    width: 2px;
+    left: 6px;
+    background-color: variables.$icons-color-secondary;
+  }
+}
+
+.training__process-item {
+  @include mixins.font-info(12px, 18px);
+
+  position: relative;
+  padding: 0 0 0 63px;
+  min-height: auto;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: variables.$icons-color-secondary;
+    left: 0;
+    top: 12px;
+  }
+}
+
+.training__process-title {
+  max-width: 200px;
+  margin: 0;
+}
+
+.training__process-item--map {
+  background: url("/__spritemap#sprite-map-view") no-repeat 30px center;
+  background-size: 25px 25px;
+}
+
+.training__process-item--boot {
+  background: url("/__spritemap#sprite-boots-view") no-repeat 30px center;
+  background-size: 25px 25px;
+}
+
+.training__process-item--forest {
+  background: url("/__spritemap#sprite-forest-view") no-repeat 30px center;
+  background-size: 25px 25px;
+}
+
+.training__process-item--mountains {
+  background: url("/__spritemap#sprite-hills-view") no-repeat 30px center;
+  background-size: 25px 25px;
+}
