@@ -15,3 +15,11 @@ trainingSlider.initialize(trainingOptions);
 const reviewSlider = new SwiperInitializer('reviews__slider');
 const reviewsOptions = reviewSlider.createReviewsOptions('reviews__pagination-button-prev', 'reviews__pagination-button-next');
 reviewSlider.initialize(reviewsOptions);
+
+const advSlider = new SwiperInitializer('adv__slider');
+const advOptions = advSlider.createAdvOptions('adv__pagination-button-prev', 'adv__pagination-button-next');
+advSlider.initialize(advOptions);
+
+const gallerySlider = new SwiperInitializer('gallery__slider');
+const galleryOptions = gallerySlider.createGalleryOptions('gallery__pagination-button-prev', 'gallery__pagination-button-next');
+gallerySlider.initialize(galleryOptions);

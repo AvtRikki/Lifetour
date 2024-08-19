@@ -30,6 +30,11 @@
   z-index: 1;
 }
 
+.tours__image {
+  width: 100%;
+  object-fit: cover;
+}
+
 .tours__details-wrapper {
   display: flex;
   flex-direction: column;

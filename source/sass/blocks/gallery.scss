@@ -1,2 +1,46 @@
 @use "../common/variables.scss";
 @use "../common/mixins.scss";
+
+.gallery__header {
+  padding: 15px 15px 0 15px;
+  margin-bottom: 27px;
+}
+
+.gallery__description {
+  margin-bottom: 31px;
+  padding: 15px 15px 0 15px;
+
+  & p {
+    @include mixins.font-info(12px, 18px);
+
+    margin: 0 0 31px;
+  }
+}
+
+.gallery__pagination {
+  display: none;
+}
+
+.gallery__items {
+  @include mixins.list-base;
+
+  @include mixins.mobile {
+    max-height: 260px;
+  }
+}
+
+.gallery__item {
+  overflow: hidden;
+}
+
+.gallery__item--twin {
+  display: grid;
+  grid-template-rows: 149px 110px;
+  gap: 7px;
+}
+
+.gallery__image {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}

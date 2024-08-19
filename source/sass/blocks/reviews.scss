@@ -2,7 +2,7 @@
 @use "../common/mixins.scss";
 
 .reviews__header {
-  margin-bottom: 32px;
+  margin: 20px 15px 17px;
 }
 
 .reviews__pagination {
@@ -19,11 +19,34 @@
 }
 
 .reviews__item {
-  flex: 1;
   display: block;
+  flex-shrink: 0;
+  max-width: 100%;
+  min-height: 484px;
   height: 100%;
   border: 1px solid variables.$background-color-primary;
   padding: 20px;
   box-sizing: border-box;
   box-shadow: 0 0 20px 0 rgba(variables.$background-color-alternative, 0.1);
+  margin: 15px 15px 20px;
+  width: min-content;
+}
+
+.reviews__image-wrapper {
+  margin-bottom: 20px;
+}
+
+.reviews__details {
+  @include mixins.font-info(12px, 18px);
+
+  h3 {
+    @include mixins.font-info(12px, 12px, 700);
+
+    margin-top: auto;
+    margin-bottom: 8px;
+  }
+}
+
+.reviews__author {
+  margin: 0;
 }

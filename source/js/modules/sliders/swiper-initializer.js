@@ -130,12 +130,10 @@ export class SwiperInitializer {
         prevEl: `.${prevSlideClassName}`,
       },
       loop: false,
-      spaceBetween: 20,
       breakpoints: {
         320: {
           allowTouchMove: true,
-          slidesPerView: 1,
-
+          slidesPerView: 'auto',
         },
         768: {
           allowTouchMove: true,
@@ -144,6 +142,57 @@ export class SwiperInitializer {
         1440: {
           allowTouchMove: false,
           slidesPerView: 3,
+        },
+      },
+    };
+  }
+
+  createAdvOptions(prevSlideClassName, nextSlideClassName) {
+    return {
+      navigation: {
+        nextEl: `.${nextSlideClassName}`,
+        prevEl: `.${prevSlideClassName}`,
+      },
+      loop: false,
+      breakpoints: {
+        320: {
+          allowTouchMove: true,
+          slidesPerView: 'auto',
+          allowSlideNext: false,
+          allowSlidePrev: false,
+        },
+        768: {
+          allowTouchMove: true,
+          slidesPerView: 2,
+        },
+        1440: {
+          allowTouchMove: false,
+          slidesPerView: 3,
+        },
+      },
+    };
+  }
+
+  createGalleryOptions(prevSlideClassName, nextSlideClassName) {
+    return {
+      navigation: {
+        nextEl: `.${nextSlideClassName}`,
+        prevEl: `.${prevSlideClassName}`,
+      },
+      loop: false,
+      breakpoints: {
+        320: {
+          allowTouchMove: true,
+          slidesPerView: 2,
+          spaceBetween: 5,
+        },
+        768: {
+          allowTouchMove: true,
+          slidesPerView: 3,
+        },
+        1440: {
+          allowTouchMove: false,
+          slidesPerView: 5,
         },
       },
     };

@@ -1,0 +1,122 @@
+@use "../common/variables.scss";
+@use "../common/mixins.scss";
+
+.contacts__wrapper {
+  padding-top: 36px;
+}
+
+.contacts__header-wrapper {
+  padding: 0 15px;
+}
+
+.contacts__header {
+  margin-bottom: 29px;
+
+  & + p {
+    @include mixins.font-info(14px, 20px);
+    margin: 0 0 30px;
+  }
+}
+
+.contacts__items {
+  @include mixins.list-base;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.contacts__item {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-color: variables.$icons-color-primary;
+  }
+}
+
+.contacts__item--phone {
+  &:after {
+    mask: url("/__spritemap#sprite-phone-view");
+  }
+}
+
+.contacts__item--email {
+  &:after {
+    mask: url("/__spritemap#sprite-mail-view");
+  }
+}
+
+.contacts__item--address {
+  &:after {
+    mask: url("/__spritemap#sprite-pin-stroke-view");
+  }
+}
+
+.contacts__item-header {
+  @include mixins.font-info(14px, 14px, 600);
+
+  margin: 0 0 8px 32px;
+}
+
+.contacts__item-content {
+  @include mixins.font-info(14px, 20px);
+
+  max-width: 180px;
+  margin: 0 0 0 32px;
+  text-decoration: none;
+  color: variables.$font-color-primary;
+}
+
+.contacts__item-content--link {
+  cursor: pointer;
+  display: block;
+  width: fit-content;
+  border: 1px solid variables.$transparent-color;
+
+  &:hover {
+    border-bottom-color: variables.$font-color-primary;
+  }
+
+  &:focus {
+    border-color: variables.$font-color-primary;
+  }
+
+  &:active {
+    color: variables.$button-color-primary;
+  }
+
+  &:disabled {
+    color: variables.$font-color-disabled;
+  }
+}
+
+.contacts__image {
+  object-fit: cover;
+  width: 100%;
+}
+
+.contacts__image-wrapper {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 28px;
+    height: 28px;
+    top: calc(50% - 5px);
+    left: calc(50% + 40px);
+    mask: url("/__spritemap#sprite-pin-filled-view");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size:contain;
+    background-color: variables.$icons-color-secondary;
+  }
+}

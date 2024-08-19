@@ -1,2 +1,82 @@
 @use "../common/variables.scss";
 @use "../common/mixins.scss";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 23px 20px 20px 20px;
+}
+
+.footer__logo {
+  color: inherit;
+  cursor: pointer;
+
+  &:hover {
+    color: rgba(variables.$font-color-accent, 0.5);
+  }
+
+  &:focus {
+    color: variables.$font-color-primary;
+  }
+
+  &:active {
+    color: variables.$font-color-active;
+  }
+
+  &:disabled {
+    color: variables.$font-color-disabled;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+  margin-bottom: 23px;
+}
+
+.footer__social {
+  @include mixins.list-base;
+
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-bottom: 23px;
+}
+
+.footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 33px;
+  min-height: 30px;
+  border: 1px solid variables.$font-color-disabled;
+}
+
+.footer__link {
+  @include mixins.font-info(14px, 14px);
+
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid variables.$transparent-color;
+
+  &:hover {
+    border-bottom-color: variables.$font-color-primary;
+  }
+
+  &:focus {
+    border-color: variables.$font-color-primary;
+  }
+
+  &:active {
+    color: variables.$button-color-primary;
+  }
+
+  &:disabled {
+    color: variables.$font-color-disabled;
+  }
+}

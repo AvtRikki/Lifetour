@@ -28,6 +28,7 @@
   border: 1px solid rgba(variables.$icons-color-primary, 0.3);
 
   &:hover {
+    color: variables.$font-color-primary;
     border-color: variables.$icons-color-primary;
   }
 
@@ -36,6 +37,7 @@
   }
 
   &:active {
+    color: variables.$font-color-accent;
     background-color: variables.$icons-color-secondary;
   }
 

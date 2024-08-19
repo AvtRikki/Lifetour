@@ -4,6 +4,7 @@
 .page {
   box-sizing: border-box;
   height: 100%;
+  min-width: variables.$view-port-mobile;
 }
 
 .page__body {

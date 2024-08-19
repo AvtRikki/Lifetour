@@ -1,0 +1,46 @@
+@use "../common/variables.scss";
+@use "../common/mixins.scss";
+
+.footer-nav__items {
+  @include mixins.list-base;
+
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+.footer-nav__item {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav__link {
+  @include mixins.font-info(14px, 14px);
+
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid variables.$transparent-color;
+  width: fit-content;
+  padding: 5px 3px;
+
+  &:hover {
+    border-bottom-color: variables.$font-color-primary;
+  }
+
+  &:focus {
+    border-color: variables.$font-color-primary;
+  }
+
+  &:active {
+    color: variables.$button-color-primary;
+  }
+
+  &:disabled {
+    color: variables.$font-color-disabled;
+  }
+}
