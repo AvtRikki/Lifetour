@@ -2,17 +2,38 @@
 @use "../common/mixins.scss";
 
 .tours__wrapper {
-  padding-top: 36px;
+  @include mixins.mobile {
+    padding-top: 36px;
+  }
+
+  @include mixins.tablet {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
 }
 
 .tours__header-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 25px;
+
+  @include mixins.mobile {
+    margin-bottom: 25px;
+  }
+
+  @include mixins.tablet {
+    margin-bottom: 35px;
+  }
 }
 
 .tours__pagination {
-  display: none;
+  @include mixins.mobile {
+    display: none;
+  }
+
+  @include mixins.tablet {
+    display: flex;
+    gap: 4px;
+  }
 }
 
 .tours__items {
@@ -146,12 +167,18 @@
 }
 
 .tours_link {
-  @include mixins.font-info(14px, 14px, 700);
-
   position: relative;
   color: inherit;
   letter-spacing: 0.04em;
   padding-right: 28px;
+
+  @include mixins.mobile {
+    @include mixins.font-info(14px, 14px, 700);
+  }
+
+  @include mixins.tablet {
+    @include mixins.font-info(16px, 16px, 700);
+  }
 
   &::after {
     content: "";

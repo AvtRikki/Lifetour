@@ -21,28 +21,89 @@
   color: variables.$font-color-primary;
 }
 
+.page__main {
+  background-color: variables.$background-color-primary;
+  background-repeat: no-repeat;
+
+  @include mixins.mobile {
+    background-size: 170px 595px;
+    background-position: calc(100% + 34px) 626px;
+    background-image:
+      image-set(
+          "../img/decorations/clouds-mobile@1x.webp" type("image/webp"),
+          "../img/decorations/clouds-mobile@1x.jpg" type("image/jpeg")
+      );
+
+    @media (resolution >= 2dppx) {
+      background-image:
+        image-set(
+            "../img/decorations/clouds-mobile@2x.webp" type("image/webp"),
+            "../img/decorations/clouds-mobile@2x.png" type("image/png")
+        );
+    }
+  }
+
+  @include mixins.tablet {
+    //background-size: 294px 1364px;
+    //background-position: 100px 400px;
+    //background-image:
+    //  image-set(
+    //      "../img/decorations/clouds-tablet@1x.webp" type("image/webp"),
+    //      "../img/decorations/clouds-tablet@1x.jpg" type("image/jpeg")
+    //  );
+    //
+    //@media (resolution >= 2dppx) {
+    //  background-image:
+    //    image-set(
+    //        "../img/decorations/clouds-tablet@2x.webp" type("image/webp"),
+    //        "../img/decorations/clouds-tablet@2x.png" type("image/png")
+    //    );
+    //}
+  }
+}
+
 .page__container {
   min-width: variables.$view-port-mobile;
   width: 100%;
   max-width: variables.$view-port-desktop-wide;
   margin: 0 auto;
-  padding: 15px;
+
+  @include mixins.mobile {
+    padding: 15px;
+  }
+
+  @include mixins.tablet {
+    padding: 20px 45px;
+  }
 }
 
 .page__header {
-  @include mixins.font-info(22px, 22px, 800);
-
-  margin: 0;
   position: relative;
+  margin: 0;
+
+  @include mixins.mobile {
+    @include mixins.font-info(22px, 22px, 800);
+  }
+
+  @include mixins.tablet {
+    @include mixins.font-info(25px, 25px, 800);
+  }
 }
 
 .page__header:before {
-  @include mixins.font-info(26px, 26px, 800);
-
   content: attr(data-title);
   width: max-content;
   position: absolute;
-  bottom: 12px;
   left: 0;
   opacity: .03;
+
+  @include mixins.mobile {
+    @include mixins.font-info(26px, 26px, 800);
+    bottom: 12px;
+  }
+
+  @include mixins.tablet {
+    @include mixins.font-info(40px, 40px, 800);
+    bottom: 0;
+  }
 }

@@ -2,27 +2,67 @@
 @use "../common/mixins.scss";
 
 .training__wrapper {
-  padding-top: 36px;
+  @include mixins.mobile {
+    padding-top: 36px;
+  }
+
+  @include mixins.tablet {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
 }
 
 .training__header {
-  margin-bottom: 18px;
+  @include mixins.mobile {
+    margin-bottom: 18px;
+  }
+
+  @include mixins.tablet {
+    margin-bottom: 36px;
+  }
 }
 
 .training__header + p {
-  @include mixins.font-info(14px, 20px);
-
   margin: 0 0 25px;
+
+  @include mixins.mobile {
+    @include mixins.font-info(14px, 20px);
+  }
+
+  @include mixins.tablet {
+    @include mixins.font-info(16px, 24px);
+  }
+}
+
+.training__subheader-wrapper {
+  @include mixins.tablet {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
 }
 
 .training__subheader {
-  @include mixins.font-info(22px, 22px, 800);
-
   margin: 0;
+
+  @include mixins.mobile {
+    @include mixins.font-info(22px, 22px, 800);
+  }
+
+  @include mixins.tablet {
+    @include mixins.font-info(25px, 25px, 800);
+  }
 }
 
 .training__pagination {
-  display: none;
+  @include mixins.mobile {
+    display: none;
+  }
+
+  @include mixins.tablet {
+    display: flex;
+    gap: 4px;
+  }
 }
 
 .training__subheader-wrapper {
@@ -39,6 +79,13 @@
 .training__item {
   border: 1px solid rgba(variables.$background-color-secondary, 0.1);
   padding: 15px;
+  height: auto;
+}
+
+.training__slider {
+  @include mixins.tablet {
+    margin-bottom: 10px;
+  }
 }
 
 .training__details {
@@ -90,47 +137,69 @@
 }
 
 .training__process-header {
-  @include mixins.font-info(16px, 16px, 700);
+  @include mixins.mobile {
+    @include mixins.font-info(16px, 16px, 700);
+    margin: 0 0 25px;
+  }
 
-  margin: 0 0 25px;
+  @include mixins.tablet {
+    @include mixins.font-info(18px, 18px, 700);
+    margin: 0 0 104px;
+  }
 }
 
 .training__process-items {
   @include mixins.list-base;
 
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  margin-bottom: 5px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 18px;
-    bottom: 18px;
-    width: 2px;
-    left: 6px;
-    background-color: variables.$icons-color-secondary;
+  @include mixins.mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 5px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 18px;
+      bottom: 18px;
+      width: 2px;
+      left: 6px;
+      background-color: variables.$icons-color-secondary;
+    }
+  }
+
+  @include mixins.tablet {
+    display: grid;
+    grid-template-areas: 'map mountains'
+                         'boot forest';
+    gap: 104px;
   }
 }
 
 .training__process-item {
-  @include mixins.font-info(12px, 18px);
-
   position: relative;
   padding: 0 0 0 63px;
   min-height: auto;
 
-  &::after {
-    content: "";
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: variables.$icons-color-secondary;
-    left: 0;
-    top: 12px;
+  @include mixins.mobile {
+    @include mixins.font-info(12px, 18px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: variables.$icons-color-secondary;
+      left: 0;
+      top: 12px;
+    }
+  }
+
+  @include mixins.tablet {
+    @include mixins.font-info(14px, 22px);
   }
 }
 
@@ -140,21 +209,25 @@
 }
 
 .training__process-item--map {
-  background: url("/__spritemap#sprite-map-view") no-repeat 30px center;
+  background: url("/__spritemap#sprite-map-view") no-repeat 30px 5px;
   background-size: 25px 25px;
+  grid-area: map;
 }
 
 .training__process-item--boot {
-  background: url("/__spritemap#sprite-boots-view") no-repeat 30px center;
+  background: url("/__spritemap#sprite-boots-view") no-repeat 30px 5px;
   background-size: 25px 25px;
+  grid-area: boot;
 }
 
 .training__process-item--forest {
-  background: url("/__spritemap#sprite-forest-view") no-repeat 30px center;
+  background: url("/__spritemap#sprite-forest-view") no-repeat 30px 5px;
   background-size: 25px 25px;
+  grid-area: forest;
 }
 
 .training__process-item--mountains {
-  background: url("/__spritemap#sprite-hills-view") no-repeat 30px center;
+  background: url("/__spritemap#sprite-hills-view") no-repeat 30px 5px;
   background-size: 25px 25px;
+  grid-area: mountains;
 }

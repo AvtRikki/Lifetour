@@ -21,18 +21,37 @@
 }
 
 .hero__item--сaucasus {
-  background-image:
-    image-set(
-        "../img/hero/hero-1-mobile@1x.webp" type("image/webp"),
-        "../img/hero/hero-1-mobile@1x.jpg" type("image/jpeg")
-    );
 
-  @media (resolution >= 2dppx) {
+  @include mixins.mobile {
     background-image:
       image-set(
-          "../img/hero/hero-1-mobile@2x.webp" type("image/webp"),
-          "../img/hero/hero-1-mobile@2x.png" type("image/png")
+          "../img/hero/hero-1-mobile@1x.webp" type("image/webp"),
+          "../img/hero/hero-1-mobile@1x.jpg" type("image/jpeg")
       );
+
+    @media (resolution >= 2dppx) {
+      background-image:
+        image-set(
+            "../img/hero/hero-1-mobile@2x.webp" type("image/webp"),
+            "../img/hero/hero-1-mobile@2x.png" type("image/png")
+        );
+    }
+  }
+
+  @include mixins.tablet {
+    background-image:
+      image-set(
+          "../img/hero/hero-1-tablet@1x.webp" type("image/webp"),
+          "../img/hero/hero-1-tablet@1x.jpg" type("image/jpeg")
+      );
+
+    @media (resolution >= 2dppx) {
+      background-image:
+        image-set(
+            "../img/hero/hero-1-tablet@2x.webp" type("image/webp"),
+            "../img/hero/hero-1-tablet@2x.png" type("image/png")
+        );
+    }
   }
 
   background-repeat: no-repeat;
@@ -40,18 +59,32 @@
 }
 
 .hero__item--kamchatka {
-  background-image:
-    image-set(
+  @include mixins.mobile {
+    background-image: image-set(
         "../img/hero/hero-2-mobile@1x.webp" type("image/webp"),
         "../img/hero/hero-2-mobile@1x.jpg" type("image/jpeg")
     );
 
-  @media (resolution >= 2dppx) {
-    background-image:
-      image-set(
+    @media (resolution >= 2dppx) {
+      background-image: image-set(
           "../img/hero/hero-2-mobile@2x.webp" type("image/webp"),
           "../img/hero/hero-2-mobile@2x.png" type("image/png")
       );
+    }
+  }
+
+  @include mixins.tablet {
+    background-image: image-set(
+        "../img/hero/hero-2-tablet@1x.webp" type("image/webp"),
+        "../img/hero/hero-2-tablet@1x.jpg" type("image/jpeg")
+    );
+
+    @media (resolution >= 2dppx) {
+      background-image: image-set(
+          "../img/hero/hero-2-tablet@2x.webp" type("image/webp"),
+          "../img/hero/hero-2-tablet@2x.png" type("image/png")
+      );
+    }
   }
 
   background-repeat: no-repeat;
@@ -59,18 +92,36 @@
 }
 
 .hero__item--altai {
-  background-image:
-    image-set(
-        "../img/hero/hero-3-mobile@1x.webp" type("image/webp"),
-        "../img/hero/hero-3-mobile@1x.jpg" type("image/jpeg")
-    );
-
-  @media (resolution >= 2dppx) {
+  @include mixins.mobile {
     background-image:
       image-set(
-          "../img/hero/hero-3-mobile@2x.webp" type("image/webp"),
-          "../img/hero/hero-3-mobile@2x.png" type("image/png")
+          "../img/hero/hero-3-mobile@1x.webp" type("image/webp"),
+          "../img/hero/hero-3-mobile@1x.jpg" type("image/jpeg")
       );
+
+    @media (resolution >= 2dppx) {
+      background-image:
+        image-set(
+            "../img/hero/hero-3-mobile@2x.webp" type("image/webp"),
+            "../img/hero/hero-3-mobile@2x.png" type("image/png")
+        );
+    }
+  }
+
+  @include mixins.tablet {
+    background-image:
+      image-set(
+          "../img/hero/hero-3-tablet@1x.webp" type("image/webp"),
+          "../img/hero/hero-3-tablet@1x.jpg" type("image/jpeg")
+      );
+
+    @media (resolution >= 2dppx) {
+      background-image:
+        image-set(
+            "../img/hero/hero-3-tablet@2x.webp" type("image/webp"),
+            "../img/hero/hero-3-tablet@2x.png" type("image/png")
+        );
+    }
   }
 
   background-repeat: no-repeat;
@@ -78,25 +129,46 @@
 }
 
 .hero__item-wrapper {
-  min-height: 472px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  h2 {
-    @include mixins.font-info(26px, 26px, 800);
+  @include mixins.mobile {
+    min-height: 472px;
+  }
 
+  @include mixins.tablet {
+    min-height: 1034px;
+  }
+
+  h2 {
     text-align: center;
     margin: 0 0 15px;
     padding: 0;
+
+    @include mixins.mobile {
+      @include mixins.font-info(26px, 26px, 800);
+    }
+
+    @include mixins.tablet {
+      @include mixins.font-info(56px, 56px, 800);
+    }
   }
 
   p {
-    @include mixins.font-info(15px, 20px);
-
     text-align: center;
-    margin: 0 0 60px;
+
+    @include mixins.mobile {
+      @include mixins.font-info(15px, 20px);
+      margin: 0 0 60px;
+    }
+
+    @include mixins.tablet {
+      @include mixins.font-info(17px, 24px);
+      max-width: 500px;
+      margin: 0 0 35px;
+    }
   }
 }
 
@@ -120,11 +192,19 @@
   transform: translateX(-50%);
 
   & span {
-    width: 16px;
-    height: 16px;
     border: 1px solid variables.$button-color-secondary;
     border-radius: 50%;
     transition: background .5s ease;
+
+    @include mixins.mobile {
+      width: 16px;
+      height: 16px;
+    }
+
+    @include mixins.tablet {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   & span[aria-current="true"] {

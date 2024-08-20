@@ -8,10 +8,19 @@
 
 .header__container {
   position: relative;
-  display: grid;
-  grid-template-columns: 26px 1fr 142px;
-  row-gap: 12px;
-  align-items: start;
+
+  @include mixins.mobile {
+    display: grid;
+    grid-template-columns: 26px 1fr 142px;
+    row-gap: 12px;
+    align-items: start;
+  }
+
+  @include mixins.tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .header__menu-button--closed::before {
@@ -60,6 +69,10 @@
   color: inherit;
   grid-column: 3/-1;
   cursor: pointer;
+
+  @include mixins.tablet {
+    margin-left: 100px;
+  }
 
   &:hover {
     color: rgba(variables.$font-color-accent, 0.5);
