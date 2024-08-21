@@ -23,7 +23,7 @@
 }
 
 @mixin mobile {
-  @media (min-width: variables.$view-port-mobile) and (max-width: variables.$view-port-tablet - 1px) {
+  @media (max-width: variables.$view-port-tablet - 1px) {
     @content;
   }
 }

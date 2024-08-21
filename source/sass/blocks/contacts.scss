@@ -2,19 +2,48 @@
 @use "../common/mixins.scss";
 
 .contacts__wrapper {
-  padding-top: 36px;
+  @include mixins.mobile {
+    padding-top: 36px;
+  }
+
+  @include mixins.tablet {
+    padding-top: 60px;
+  }
 }
 
 .contacts__header-wrapper {
-  padding: 0 15px;
+  @include mixins.mobile {
+    padding: 0 15px;
+  }
+
+  @include mixins.tablet {
+    padding: 0 45px;
+  }
 }
 
 .contacts__header {
-  margin-bottom: 29px;
+  @include mixins.mobile {
+    margin-bottom: 29px;
+  }
+
+  @include mixins.tablet {
+    margin-bottom: 20px;
+  }
 
   & + p {
-    @include mixins.font-info(14px, 20px);
-    margin: 0 0 30px;
+    @include mixins.mobile {
+      @include mixins.font-info(14px, 20px);
+
+      margin: 0 0 30px;
+    }
+
+    @include mixins.tablet {
+      @include mixins.font-info(16px, 24px);
+
+      margin: 0 0 40px;
+      max-width: 480px;
+    }
+
   }
 }
 
@@ -22,9 +51,18 @@
   @include mixins.list-base;
 
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-bottom: 30px;
+
+  @include mixins.mobile {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  @include mixins.tablet {
+    flex-direction: row;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
 }
 
 .contacts__item {
@@ -68,10 +106,13 @@
 .contacts__item-content {
   @include mixins.font-info(14px, 20px);
 
-  max-width: 180px;
   margin: 0 0 0 32px;
   text-decoration: none;
   color: variables.$font-color-primary;
+
+  @include mixins.mobile {
+    max-width: 180px;
+  }
 }
 
 .contacts__item-content--link {
@@ -105,18 +146,34 @@
 .contacts__image-wrapper {
   position: relative;
 
+  @include mixins.mobile {
+    margin-bottom: 20px;
+  }
+
+  @include mixins.tablet {
+    margin-bottom: 40px;
+  }
+
   &:after {
     content: '';
     position: absolute;
     display: block;
     width: 28px;
     height: 28px;
-    top: calc(50% - 5px);
-    left: calc(50% + 40px);
     mask: url("/__spritemap#sprite-pin-filled-view");
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size:contain;
     background-color: variables.$icons-color-secondary;
+
+    @include mixins.mobile {
+      top: calc(50% - 5px);
+      left: calc(50% + 40px);
+    }
+
+    @include mixins.tablet {
+      top: calc(50% + 10px);
+      left: calc(50% + 6px);
+    }
   }
 }

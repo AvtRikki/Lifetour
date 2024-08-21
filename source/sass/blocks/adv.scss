@@ -2,24 +2,52 @@
 @use "../common/mixins.scss";
 
 .adv__wrapper {
-  padding: 15px 15px 20px;
+  @include mixins.mobile {
+    padding: 15px 15px 20px;
+  }
+
+  @include mixins.tablet {
+    padding: 60px 45px 40px;
+  }
 }
 
 .adv__header {
   text-align: center;
-  margin-bottom: 37px;
   &::before {
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  @include mixins.mobile {
+    margin-bottom: 37px;
+  }
+
+  @include mixins.tablet {
+    margin-bottom: 50px;
   }
 }
 
 .adv__items {
   @include mixins.list-base;
 
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  @include mixins.mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  @include mixins.tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+
+    & > :last-child {
+      grid-column: 1 / -1;
+      justify-self: center;
+    }
+  }
 }
 
 .adv__item {
@@ -28,9 +56,17 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px 10px;
   border: 1px solid rgba(variables.$button-color-primary, 0.1);
   position: relative;
+
+  @include mixins.mobile {
+    padding: 20px 10px;
+  }
+
+  @include mixins.tablet {
+    max-width: 324px;
+    padding: 30px 20px;
+  }
 
   &:before {
     content: '';
@@ -56,15 +92,27 @@
   }
 
   & h3 {
-    @include mixins.font-info(14px, 14px, 600);
-
     margin: 82px 0 15px;
+
+    @include mixins.mobile {
+      @include mixins.font-info(14px, 14px, 600);
+    }
+
+    @include mixins.tablet {
+      @include mixins.font-info(16px, 16px, 600);
+    }
   }
 
   & p {
-    @include mixins.font-info(12px, 18px);
-
     margin: 0;
+
+    @include mixins.mobile {
+      @include mixins.font-info(12px, 18px);
+    }
+
+    @include mixins.tablet {
+      @include mixins.font-info(14px, 22px);
+    }
   }
 }
 

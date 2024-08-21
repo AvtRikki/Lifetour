@@ -1,12 +1,41 @@
 @use "../common/variables.scss";
 @use "../common/mixins.scss";
 
+.reviews__wrapper {
+  @include mixins.mobile {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.reviews__header-wrapper {
+  @include mixins.tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 45px 10px 45px;
+  }
+}
+
 .reviews__header {
-  margin: 20px 15px 17px;
+  @include mixins.mobile {
+    margin: 0 15px 17px;
+  }
+
+  @include mixins.tablet {
+    margin: 0;
+  }
 }
 
 .reviews__pagination {
-  display: none;
+  @include mixins.mobile {
+    display: none;
+  }
+
+  @include mixins.tablet {
+    display: flex;
+    gap: 4px;
+  }
 }
 
 .reviews__items {
@@ -16,24 +45,44 @@
   justify-content: space-between;
   align-items: stretch;
   width: 100%;
+
+  @include mixins.tablet {
+    margin-left: 30px;
+  }
 }
 
 .reviews__item {
-  display: block;
   flex-shrink: 0;
   max-width: 100%;
-  min-height: 484px;
-  height: 100%;
+  height: auto;
   border: 1px solid variables.$background-color-primary;
   padding: 20px;
   box-sizing: border-box;
   box-shadow: 0 0 20px 0 rgba(variables.$background-color-alternative, 0.1);
   margin: 15px 15px 20px;
   width: min-content;
+
+  @include mixins.mobile {
+    display: block;
+    min-height: 484px;
+  }
+
+  @include mixins.tablet {
+    display: flex;
+    gap: 30px;
+    min-width: 565px;
+    min-height: auto;
+  }
 }
 
 .reviews__image-wrapper {
-  margin-bottom: 20px;
+  @include mixins.mobile {
+    margin-bottom: 20px;
+  }
+
+  @include mixins.tablet {
+    margin-bottom: 0;
+  }
 }
 
 .reviews__details {
@@ -41,12 +90,28 @@
 
   h3 {
     @include mixins.font-info(12px, 12px, 700);
-
-    margin-top: auto;
     margin-bottom: 8px;
+
+    @include mixins.mobile {
+      margin-top: auto;
+    }
+
+    @include mixins.tablet {
+      margin-top: 25px;
+    }
+  }
+
+  p {
+    margin: 0 0 10px;
   }
 }
 
 .reviews__author {
-  margin: 0;
+  @include mixins.mobile {
+    margin: 0;
+  }
+
+  @include mixins.tablet {
+    margin-top: 6px;
+  }
 }

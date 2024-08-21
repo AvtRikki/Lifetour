@@ -139,7 +139,7 @@ export class SwiperInitializer {
         },
         768: {
           allowTouchMove: true,
-          slidesPerView: 2,
+          slidesPerView: 'auto',
         },
         1440: {
           allowTouchMove: false,
