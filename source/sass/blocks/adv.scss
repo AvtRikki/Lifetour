@@ -1,6 +1,27 @@
 @use "../common/variables.scss";
 @use "../common/mixins.scss";
 
+.adv {
+    @include mixins.tablet {
+      background-repeat: no-repeat;
+      background-size: 768px 996px;
+      background-position: 100% 177px;
+      background-image:
+        image-set(
+            "../img/decorations/clouds-3-tablet@1x.webp" type("image/webp"),
+            "../img/decorations/clouds-3-tablet@1x.jpg" type("image/jpeg")
+        );
+
+      @media (resolution >= 2dppx) {
+        background-image:
+          image-set(
+              "../img/decorations/clouds-3-tablet@2x.webp" type("image/webp"),
+              "../img/decorations/clouds-3-tablet@2x.png" type("image/png")
+          );
+      }
+    }
+}
+
 .adv__wrapper {
   @include mixins.mobile {
     padding: 15px 15px 20px;
@@ -56,6 +77,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: variables.$background-color-primary;
   border: 1px solid rgba(variables.$button-color-primary, 0.1);
   position: relative;
 

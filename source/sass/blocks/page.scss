@@ -26,8 +26,8 @@
   background-repeat: no-repeat;
 
   @include mixins.mobile {
-    background-size: 170px 595px;
-    background-position: calc(100% + 34px) 626px;
+    background-size: 141px 595px;
+    background-position: 100% 543px;
     background-image:
       image-set(
           "../img/decorations/clouds-mobile@1x.webp" type("image/webp"),
@@ -44,21 +44,21 @@
   }
 
   @include mixins.tablet {
-    //background-size: 294px 1364px;
-    //background-position: 100px 400px;
-    //background-image:
-    //  image-set(
-    //      "../img/decorations/clouds-tablet@1x.webp" type("image/webp"),
-    //      "../img/decorations/clouds-tablet@1x.jpg" type("image/jpeg")
-    //  );
-    //
-    //@media (resolution >= 2dppx) {
-    //  background-image:
-    //    image-set(
-    //        "../img/decorations/clouds-tablet@2x.webp" type("image/webp"),
-    //        "../img/decorations/clouds-tablet@2x.png" type("image/png")
-    //    );
-    //}
+    background-size: 425px 1630px;
+    background-position: 100% 1033px;
+    background-image:
+      image-set(
+          "../img/decorations/clouds-1-tablet@1x.webp" type("image/webp"),
+          "../img/decorations/clouds-1-tablet@1x.jpg" type("image/jpeg")
+      );
+
+    @media (resolution >= 2dppx) {
+      background-image:
+        image-set(
+            "../img/decorations/clouds-1-tablet@2x.webp" type("image/webp"),
+            "../img/decorations/clouds-1-tablet@2x.png" type("image/png")
+        );
+    }
   }
 }
 

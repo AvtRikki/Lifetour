@@ -1,6 +1,27 @@
 @use "../common/variables.scss";
 @use "../common/mixins.scss";
 
+.training {
+  @include mixins.tablet {
+    background-repeat: no-repeat;
+    background-size: 465px 280px;
+    background-position: 100% 620px;
+    background-image:
+      image-set(
+          "../img/decorations/clouds-2-tablet@1x.webp" type("image/webp"),
+          "../img/decorations/clouds-2-tablet@1x.jpg" type("image/jpeg")
+      );
+
+    @media (resolution >= 2dppx) {
+      background-image:
+        image-set(
+            "../img/decorations/clouds-2-tablet@2x.webp" type("image/webp"),
+            "../img/decorations/clouds-2-tablet@2x.png" type("image/png")
+        );
+    }
+  }
+}
+
 .training__wrapper {
   @include mixins.mobile {
     padding-top: 36px;
@@ -77,6 +98,7 @@
 }
 
 .training__item {
+  background-color: variables.$background-color-primary;
   border: 1px solid rgba(variables.$background-color-secondary, 0.1);
   padding: 15px;
   height: auto;

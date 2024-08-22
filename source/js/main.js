@@ -1,4 +1,6 @@
 import { SwiperInitializer } from './modules/sliders/swiper-initializer.js';
+import { NavigationManager } from './modules/navigations/menu-manager.js';
+import {FormValidator} from "./modules/form/form-validator.js";
 
 const heroSlider = new SwiperInitializer('hero__slider');
 const heroOptions = heroSlider.createHeroOptions();
@@ -23,3 +25,9 @@ advSlider.initialize(advOptions);
 const gallerySlider = new SwiperInitializer('gallery__slider');
 const galleryOptions = gallerySlider.createGalleryOptions('gallery__pagination-button-prev', 'gallery__pagination-button-next');
 gallerySlider.initialize(galleryOptions);
+
+const menuManager = new NavigationManager('header__menu-button', 'nav');
+menuManager.initialize();
+
+const formValidator = new FormValidator('form__info');
+formValidator.initialize();
