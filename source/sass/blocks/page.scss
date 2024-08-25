@@ -60,6 +60,24 @@
         );
     }
   }
+
+  @include mixins.desktop {
+    background-size: 602px 1630px;
+    background-position: 100% 773px;
+    background-image:
+      image-set(
+          "../img/decorations/clouds-1-desktop@1x.webp" type("image/webp"),
+          "../img/decorations/clouds-1-desktop@1x.jpg" type("image/jpeg")
+      );
+
+    @media (resolution >= 2dppx) {
+      background-image:
+        image-set(
+            "../img/decorations/clouds-1-desktop@2x.webp" type("image/webp"),
+            "../img/decorations/clouds-1-desktop@2x.png" type("image/png")
+        );
+    }
+  }
 }
 
 .page__container {
@@ -75,6 +93,10 @@
   @include mixins.tablet {
     padding: 20px 45px;
   }
+
+  @include mixins.desktop {
+    padding: 32px 120px;
+  }
 }
 
 .page__header {
@@ -87,6 +109,10 @@
 
   @include mixins.tablet {
     @include mixins.font-info(25px, 25px, 800);
+  }
+
+  @include mixins.desktop {
+    @include mixins.font-info(35px, 35px, 800);
   }
 }
 
@@ -104,6 +130,11 @@
 
   @include mixins.tablet {
     @include mixins.font-info(40px, 40px, 800);
+    bottom: 0;
+  }
+
+  @include mixins.desktop {
+    @include mixins.font-info(55px, 55px, 800);
     bottom: 0;
   }
 }

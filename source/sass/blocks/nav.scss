@@ -2,26 +2,60 @@
 @use "../common/mixins.scss";
 
 .nav {
-  display: none;
-  position: absolute;
-  padding: 15px 15px 60px;
-  background-color: variables.$background-color-secondary;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 10;
+  @include mixins.mobile {
+    display: none;
+    position: absolute;
+    padding: 15px 15px 60px;
+    background-color: variables.$background-color-secondary;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  @include mixins.tablet {
+    display: none;
+  }
+
+  @include mixins.desktop {
+    margin: 0 auto;
+    display: flex;
+    order: 2;
+  }
 }
 
 .nav__items {
   @include mixins.list-base;
 
   display: flex;
-  flex-direction: column;
   gap: 22px;
+
+  @include mixins.mobile {
+    flex-direction: column;
+  }
+
+  @include mixins.tablet {
+    flex-direction: column;
+  }
+
+  @include mixins.desktop {
+    flex-direction: row;
+    gap: 30px;
+  }
 }
 
 .nav__link {
-  @include mixins.font-info(14px, 14px, 700);
+  @include mixins.mobile {
+    @include mixins.font-info(14px, 14px, 700);
+  }
+
+  @include mixins.tablet {
+    @include mixins.font-info(16px, 16px, 700);
+  }
+
+  @include mixins.desktop {
+    @include mixins.font-info(16px, 16px);
+  }
 
   display: inline-block;
   padding: 3px 5px;
