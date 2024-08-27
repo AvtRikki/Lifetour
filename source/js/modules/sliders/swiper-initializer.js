@@ -94,6 +94,7 @@ export class SwiperInitializer {
         1440: {
           allowTouchMove: false,
           slidesPerView: 3,
+          spaceBetween: 30,
         },
       },
     };
@@ -119,7 +120,8 @@ export class SwiperInitializer {
         },
         1440: {
           allowTouchMove: false,
-          slidesPerView: 3,
+          slidesPerView: 4,
+          spaceBetween: 20,
         },
       },
     };
@@ -170,6 +172,8 @@ export class SwiperInitializer {
         1440: {
           allowTouchMove: false,
           slidesPerView: 3,
+          initialSlide: 1,
+          slidesOffsetBefore: 370,
         },
       },
     };

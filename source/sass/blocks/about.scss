@@ -11,12 +11,22 @@
     grid-template-columns: 1fr 270px;
     padding: 40px 48px 40px 0;
   }
+
+  @include mixins.desktop {
+    display: grid;
+    grid-template-columns: 1fr 585px;
+    padding: 100px 195px 100px 0;
+  }
 }
 
 .about__image-wrapper {
   @include mixins.tablet {
     margin-top: 70px;
     margin-right: -30px;
+  }
+
+  @include mixins.desktop {
+    margin-top: 0;
   }
 }
 
@@ -41,6 +51,11 @@
     @include mixins.tablet {
       @include mixins.font-info(25px, 25px, 800);
     }
+
+    @include mixins.desktop {
+      @include mixins.font-info(35px, 35px, 800);
+      margin-bottom: 57px;
+    }
   }
 
   & h2:before {
@@ -59,6 +74,11 @@
       @include mixins.font-info(40px, 40px, 800);
       bottom: 0;
     }
+
+    @include mixins.tablet {
+      @include mixins.font-info(55px, 55px, 800);
+      bottom: 0;
+    }
   }
 
   h3 {
@@ -71,9 +91,15 @@
     @include mixins.tablet {
       @include mixins.font-info(18px, 18px, 700);
     }
+
+    @include mixins.desktop {
+      @include mixins.font-info(21px, 21px, 700);
+    }
   }
 
   p {
+    margin: 0 0 25px;
+
     @include mixins.mobile {
       @include mixins.font-info(14px, 20px);
     }
@@ -82,7 +108,9 @@
       @include mixins.font-info(16px, 24px);
     }
 
-    margin: 0 0 25px;
+    @include mixins.mobile {
+      @include mixins.font-info(14px, 20px);
+    }
   }
 
   p:last-child {

@@ -13,7 +13,14 @@
     &:before {
         padding-left: 40px;
       }
+  }
 
+  @include mixins.desktop {
+    padding: 119px 120px 0 120px;
+
+    &:before {
+      padding-left: 120px;
+    }
   }
 }
 
@@ -39,6 +46,17 @@
       margin: 0;
     }
   }
+
+  @include mixins.desktop {
+    padding: 27px 120px 46px 120px;
+
+    & p {
+      @include mixins.font-info(16px, 28px);
+
+      max-width: 596px;
+      margin: 0;
+    }
+  }
 }
 
 .gallery__pagination {
@@ -51,6 +69,10 @@
     display: flex;
     gap: 4px;
   }
+
+  @include mixins.desktop {
+    display: none;
+  }
 }
 
 .gallery__items {
@@ -58,6 +80,10 @@
 
   @include mixins.mobile {
     max-height: 260px;
+  }
+
+  @include mixins.desktop {
+    max-height: 463px;
   }
 }
 
@@ -76,6 +102,11 @@
   @include mixins.tablet {
     grid-template-rows: 210px 202px;
     gap: 5px;
+  }
+
+  @include mixins.desktop {
+    grid-template-rows: 233px 223px;
+    gap: 7px;
   }
 }
 

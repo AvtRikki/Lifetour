@@ -10,6 +10,11 @@
     padding-top: 60px;
     padding-bottom: 40px;
   }
+
+  @include mixins.tablet {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
 .tours__header-wrapper {
@@ -22,6 +27,10 @@
 
   @include mixins.tablet {
     margin-bottom: 35px;
+  }
+
+  @include mixins.desktop {
+    margin-bottom: 53px;
   }
 }
 
@@ -159,6 +168,10 @@
 
 .tours__slider {
   margin-bottom: 25px;
+
+  @include mixins.desktop {
+    margin-bottom: 53px;
+  }
 }
 
 .tours__actions-wrapper {

@@ -20,6 +20,11 @@
           );
       }
     }
+
+  @include mixins.desktop {
+    background-image: none;
+    overflow: hidden;
+  }
 }
 
 .adv__wrapper {
@@ -29,6 +34,12 @@
 
   @include mixins.tablet {
     padding: 60px 45px 40px;
+  }
+
+  @include mixins.desktop {
+    display: flex;
+    flex-direction: column;
+    padding: 135px 0 100px;
   }
 }
 
@@ -69,6 +80,12 @@
       justify-self: center;
     }
   }
+
+  @include mixins.desktop {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+  }
 }
 
 .adv__item {
@@ -88,6 +105,11 @@
   @include mixins.tablet {
     max-width: 324px;
     padding: 30px 20px;
+  }
+
+  @include mixins.desktop {
+    max-width: 380px;
+    padding: 40px 20px;
   }
 
   &:before {
@@ -111,6 +133,16 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: variables.$icons-color-secondary;
+  }
+
+  @include mixins.desktop {
+    &:before {
+      top: 40px;
+    }
+
+    &:after {
+      top: 50px;
+    }
   }
 
   & h3 {
@@ -159,5 +191,18 @@
 }
 
 .adv__pagination {
-  display: none;
+  @include mixins.mobile {
+    display: none;
+  }
+
+  @include mixins.tablet {
+    display: none;
+  }
+
+  @include mixins.desktop {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0 auto;
+  }
 }

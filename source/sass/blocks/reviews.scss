@@ -6,6 +6,11 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
+  @include mixins.desktop {
+    padding-top: 145px;
+    padding-bottom: 100px;
+  }
 }
 
 .reviews__header-wrapper {
@@ -14,6 +19,10 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 45px 10px 45px;
+  }
+
+  @include mixins.desktop {
+    margin: 0 120px 10px 120px;
   }
 }
 
@@ -49,6 +58,10 @@
   @include mixins.tablet {
     margin-left: 30px;
   }
+
+  @include mixins.desktop {
+    margin-left: 60px;
+  }
 }
 
 .reviews__item {
@@ -56,6 +69,7 @@
   max-width: 100%;
   height: auto;
   border: 1px solid variables.$background-color-primary;
+  background-color: variables.$background-color-primary;
   padding: 20px;
   box-sizing: border-box;
   box-shadow: 0 0 20px 0 rgba(variables.$background-color-alternative, 0.1);
@@ -73,6 +87,12 @@
     min-width: 565px;
     min-height: auto;
   }
+
+  @include mixins.desktop {
+    min-width: 700px;
+    margin: 12px 60px 15px;
+    padding: 20px 40px 20px 20px;
+  }
 }
 
 .reviews__image-wrapper {
@@ -85,8 +105,23 @@
   }
 }
 
+.reviews__image {
+  object-fit: cover;
+  height: 100%;
+}
+
 .reviews__details {
-  @include mixins.font-info(12px, 18px);
+  @include mixins.mobile {
+    @include mixins.font-info(12px, 18px);
+  }
+
+  @include mixins.tablet {
+    @include mixins.font-info(12px, 18px);
+  }
+
+  @include mixins.desktop {
+    @include mixins.font-info(14px, 22px);
+  }
 
   h3 {
     @include mixins.font-info(12px, 12px, 700);
@@ -98,6 +133,10 @@
 
     @include mixins.tablet {
       margin-top: 25px;
+    }
+
+    @include mixins.desktop {
+      margin-top: 0;
     }
   }
 
