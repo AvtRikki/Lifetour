@@ -15,6 +15,8 @@
     grid-template-columns: 1fr 600px;
     padding: 100px 120px;
     column-gap: 100px;
+    max-width: variables.$view-port-desktop-wide;
+    margin: 0 auto;
   }
 }
 

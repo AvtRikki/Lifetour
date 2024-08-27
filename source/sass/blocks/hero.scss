@@ -8,6 +8,8 @@
 
 .hero__container {
   position: relative;
+  max-width: variables.$view-port-desktop-wide;
+  margin: 0 auto;
 }
 
 .hero__items {
@@ -19,7 +21,7 @@
   flex-direction: column;
 
   @include mixins.mobile {
-    padding: 40px 15px;
+    padding: 40px 15px 56px;
   }
 
   @include mixins.desktop {
@@ -254,7 +256,7 @@
 
 .hero__button {
   min-width: 180px;
-  padding: 20px;
+  padding: 20px 20px 19px;
 
   @include mixins.mobile {
     margin: 0 auto;

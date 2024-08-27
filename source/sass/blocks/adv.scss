@@ -2,24 +2,27 @@
 @use "../common/mixins.scss";
 
 .adv {
-    @include mixins.tablet {
-      background-repeat: no-repeat;
-      background-size: 768px 996px;
-      background-position: 100% 177px;
+  max-width: variables.$view-port-desktop-wide;
+  margin: 0 auto;
+
+  @include mixins.tablet {
+    background-repeat: no-repeat;
+    background-size: 768px 996px;
+    background-position: 100% 177px;
+    background-image:
+      image-set(
+          "../img/decorations/clouds-3-tablet@1x.webp" type("image/webp"),
+          "../img/decorations/clouds-3-tablet@1x.jpg" type("image/jpeg")
+      );
+
+    @media (resolution >= 2dppx) {
       background-image:
         image-set(
-            "../img/decorations/clouds-3-tablet@1x.webp" type("image/webp"),
-            "../img/decorations/clouds-3-tablet@1x.jpg" type("image/jpeg")
+            "../img/decorations/clouds-3-tablet@2x.webp" type("image/webp"),
+            "../img/decorations/clouds-3-tablet@2x.png" type("image/png")
         );
-
-      @media (resolution >= 2dppx) {
-        background-image:
-          image-set(
-              "../img/decorations/clouds-3-tablet@2x.webp" type("image/webp"),
-              "../img/decorations/clouds-3-tablet@2x.png" type("image/png")
-          );
-      }
     }
+  }
 
   @include mixins.desktop {
     background-image: none;

@@ -2,6 +2,9 @@
 @use "../common/mixins.scss";
 
 .form {
+  max-width: variables.$view-port-desktop-wide;
+  margin: 0 auto;
+
   background-color: variables.$background-color-alternative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -115,8 +118,11 @@
 }
 
 .form__input {
-  width: 100%;
   @include mixins.font-info(16px, 16px);
+
+  width: 100%;
+  border: 1px solid rgba(variables.$background-color-secondary, 0.1);
+  border-radius: 2px;
 
   @include mixins.mobile {
     padding: 14px 15px;
@@ -127,6 +133,27 @@
     padding: 20px 30px;
     margin-bottom: 11px;
   }
+
+  &:hover {
+    border-color: variables.$background-color-secondary;
+  }
+
+  &:focus {
+    border-color: variables.$button-color-accent;
+  }
+
+  &:disabled {
+    border-color: variables.$font-color-disabled;
+  }
+
+  &:hover::placeholder {
+    color: variables.$icons-color-secondary;
+    opacity: 0.5;
+  }
+}
+
+.form__input--invalid {
+  border-color: variables.$font-color-error;
 }
 
 .form__button {

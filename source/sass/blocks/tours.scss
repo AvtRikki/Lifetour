@@ -3,7 +3,7 @@
 
 .tours__wrapper {
   @include mixins.mobile {
-    padding-top: 36px;
+    padding-top: 39px;
   }
 
   @include mixins.tablet {
@@ -22,7 +22,7 @@
   justify-content: space-between;
 
   @include mixins.mobile {
-    margin-bottom: 25px;
+    margin-bottom: 39px;
   }
 
   @include mixins.tablet {
@@ -90,6 +90,8 @@
 .tours__info-item {
   @include mixins.font-info(12px, 12px, 500);
 
+  min-width: 37px;
+
   &:before {
     content: "";
     display: block;
@@ -104,7 +106,8 @@
 .tours__info-item--place {
   position: relative;
   margin: 0;
-  padding: 8px 12px 8px 34px;
+  padding: 10px 11px 11px 33px;
+  min-height: 35px;
 
   &:before {
     left: 12px;
@@ -156,7 +159,7 @@
 .tours__title {
   @include mixins.font-info(24px, 28px, 700);
 
-  margin: 15px 0;
+  margin: 12px 0 18px;
 }
 
 .tours__additional-details {
@@ -167,7 +170,7 @@
 }
 
 .tours__slider {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 
   @include mixins.desktop {
     margin-bottom: 53px;
@@ -187,6 +190,8 @@
 
   @include mixins.mobile {
     @include mixins.font-info(14px, 14px, 700);
+
+    margin-left: 9px;
   }
 
   @include mixins.tablet {
@@ -197,7 +202,7 @@
     content: "";
     display: block;
     position: absolute;
-    right: 10px;
+    right: 7px;
     width: 9px;
     height: 14px;
     top: 50%;

@@ -1,4 +1,6 @@
 export class FormValidator {
+  #INVALID_INPUT_CLASS_NAME = 'form__input--invalid';
+
   constructor(formClassName) {
     this.formClassName = formClassName;
   }
@@ -6,21 +8,43 @@ export class FormValidator {
   initialize() {
     const form = document.querySelector(`.${this.formClassName}`);
     if (form) {
+      const phoneField = document.querySelector('input[name="phone"]');
+      const emailField = document.querySelector('input[name="email"]');
+
+      if (phoneField) {
+        phoneField.addEventListener('keydown', (e) => {
+          phoneField.classList.remove(this.#INVALID_INPUT_CLASS_NAME);
+        });
+      }
+
+      if (emailField) {
+        emailField.addEventListener('keydown', (e) => {
+          emailField.classList.remove(this.#INVALID_INPUT_CLASS_NAME);
+        });
+      }
+
+      let isInvalid = false;
       form.addEventListener('submit', (e) => {
-        const phoneField = document.querySelector('input[name="phone"]');
         if (phoneField) {
+          phoneField.classList.remove(this.#INVALID_INPUT_CLASS_NAME);
           const phoneRegex = /^[0-9+()\- ]+$/;
           if (!phoneRegex.test(phoneField.value)) {
-            e.preventDefault();
-            return false;
+            phoneField.classList.add(this.#INVALID_INPUT_CLASS_NAME);
+            isInvalid = true;
           }
         }
 
-        const emailField = document.querySelector('input[name="email"]');
-        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Zрф]{2,}$/;
-        if (!emailRegex.test(emailField.value)) {
+        if (emailField) {
+          emailField.classList.remove(this.#INVALID_INPUT_CLASS_NAME);
+          const emailRegex = /^[a-zA-Za-яA-Я0-9._%+-]+@[a-zA-Za-яA-Я0-9.-]+\.[a-zA-Zрф]{2,}$/;
+          if (!emailRegex.test(emailField.value)) {
+            emailField.classList.add(this.#INVALID_INPUT_CLASS_NAME);
+            isInvalid = true;
+          }
+        }
+
+        if (isInvalid) {
           e.preventDefault();
-          return false;
         }
       });
     }

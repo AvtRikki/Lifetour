@@ -12,8 +12,9 @@
   @include mixins.mobile {
     display: grid;
     grid-template-columns: 26px 1fr 142px;
-    row-gap: 12px;
+    row-gap: 11px;
     align-items: start;
+    padding-bottom: 13px;
   }
 
   @include mixins.tablet {

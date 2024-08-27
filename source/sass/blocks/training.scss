@@ -28,7 +28,7 @@
 
 .training__wrapper {
   @include mixins.mobile {
-    padding-top: 36px;
+    padding-top: 52px;
   }
 
   @include mixins.tablet {
@@ -39,7 +39,7 @@
 
 .training__header {
   @include mixins.mobile {
-    margin-bottom: 18px;
+    margin-bottom: 33px;
   }
 
   @include mixins.tablet {
@@ -48,7 +48,7 @@
 }
 
 .training__header + p {
-  margin: 0 0 25px;
+  margin: 0 0 29px;
 
   @include mixins.mobile {
     @include mixins.font-info(14px, 20px);
@@ -65,6 +65,10 @@
 }
 
 .training__subheader-wrapper {
+  @include mixins.mobile {
+    margin-bottom: 22px;
+  }
+
   @include mixins.tablet {
     display: flex;
     justify-content: space-between;
@@ -99,11 +103,6 @@
   }
 }
 
-.training__subheader-wrapper {
-  margin-bottom: 25px;
-}
-
-
 .training__items {
   @include mixins.list-base;
 
@@ -113,7 +112,7 @@
 .training__item {
   background-color: variables.$background-color-primary;
   border: 1px solid rgba(variables.$background-color-secondary, 0.1);
-  padding: 15px;
+  padding: 14px 14px 15px;
   height: auto;
 }
 
@@ -130,14 +129,14 @@
 .training__details {
   display: grid;
   grid-template-columns: 1fr 24px;
-  padding-top: 15px;
+  padding-top: 10px;
 
   & h4 {
     @include mixins.font-info(14px, 16px, 700);
 
     display: inline-block;
     max-width: 100px;
-    margin: 0 0 15px;
+    margin: 1px 0 14px;
     grid-column: 1/2;
 
   }
@@ -148,6 +147,12 @@
     margin: 0;
     grid-column: 1/-1;
     order: 2;
+  }
+}
+
+.training__slider {
+  @include mixins.mobile {
+    margin-bottom: 10px;
   }
 }
 
@@ -178,7 +183,7 @@
 .training__process-header {
   @include mixins.mobile {
     @include mixins.font-info(16px, 16px, 700);
-    margin: 0 0 25px;
+    margin: 0 0 23px;
   }
 
   @include mixins.tablet {
@@ -293,25 +298,25 @@
 }
 
 .training__process-item--map {
-  background: url("/__spritemap#sprite-map-view") no-repeat 10px 5px;
+  background: url("/__spritemap#sprite-map-view") no-repeat 29px 1px;
   background-size: 25px 25px;
   grid-area: map;
 }
 
 .training__process-item--boot {
-  background: url("/__spritemap#sprite-boots-view") no-repeat 10px 5px;
+  background: url("/__spritemap#sprite-boots-view") no-repeat 29px 1px;
   background-size: 25px 25px;
   grid-area: boot;
 }
 
 .training__process-item--forest {
-  background: url("/__spritemap#sprite-forest-view") no-repeat 10px 5px;
+  background: url("/__spritemap#sprite-forest-view") no-repeat 29px 1px;
   background-size: 25px 25px;
   grid-area: forest;
 }
 
 .training__process-item--mountains {
-  background: url("/__spritemap#sprite-hills-view") no-repeat 10px 5px;
+  background: url("/__spritemap#sprite-hills-view") no-repeat 29px 1px;
   background-size: 25px 25px;
   grid-area: mountains;
 }

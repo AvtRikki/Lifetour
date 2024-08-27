@@ -1,6 +1,11 @@
 @use "../common/variables.scss";
 @use "../common/mixins.scss";
 
+.gallery__wrapper {
+  max-width: variables.$view-port-desktop-wide;
+  margin: 0 auto;
+}
+
 .gallery__header {
   @include mixins.mobile {
     padding: 15px 15px 0 15px;

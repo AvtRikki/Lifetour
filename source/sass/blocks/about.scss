@@ -2,6 +2,9 @@
 @use "../common/mixins.scss";
 
 .about__wrapper {
+  max-width: variables.$view-port-desktop-wide;
+  margin: 0 auto;
+
   @include mixins.mobile {
     padding: 20px 0;
   }
@@ -20,6 +23,10 @@
 }
 
 .about__image-wrapper {
+  @include mixins.mobile {
+    margin-bottom: 13px;
+  }
+
   @include mixins.tablet {
     margin-top: 70px;
     margin-right: -30px;
@@ -82,7 +89,7 @@
   }
 
   h3 {
-    margin: 0 0 15px;
+    margin: 0 0 13px;
 
     @include mixins.mobile {
       @include mixins.font-info(16px, 16px, 700);
@@ -98,7 +105,7 @@
   }
 
   p {
-    margin: 0 0 25px;
+    margin: 0 0 27px;
 
     @include mixins.mobile {
       @include mixins.font-info(14px, 20px);

@@ -138,6 +138,7 @@ export class SwiperInitializer {
         320: {
           allowTouchMove: true,
           slidesPerView: 'auto',
+          lazyPreloadPrevNext: 1,
         },
         768: {
           allowTouchMove: true,
@@ -157,7 +158,8 @@ export class SwiperInitializer {
         nextEl: `.${nextSlideClassName}`,
         prevEl: `.${prevSlideClassName}`,
       },
-      loop: false,
+      loop: true,
+      slidesPerGroup: 2,
       breakpoints: {
         320: {
           allowTouchMove: true,
@@ -170,10 +172,10 @@ export class SwiperInitializer {
           slidesPerView: 2,
         },
         1440: {
+          slidesPerView: 4,
           allowTouchMove: false,
-          slidesPerView: 3,
-          initialSlide: 1,
-          slidesOffsetBefore: 370,
+          initialSlide: 2,
+          centeredSlides: true,
         },
       },
     };
