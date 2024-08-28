@@ -47,24 +47,24 @@
 
 .footer__wrapper {
   display: flex;
-
   justify-content: center;
   align-items: center;
-  gap: 23px;
-
 
   @include mixins.mobile {
     flex-direction: column;
-    margin-bottom: 23px;
+    margin-bottom: 16px;
+    gap: 11px;
   }
 
   @include mixins.tablet {
     flex-direction: row;
     margin-bottom: 34px;
+    gap: 23px;
   }
 
   @include mixins.desktop {
     margin-bottom: 22px;
+    gap: 23px;
   }
 }
 

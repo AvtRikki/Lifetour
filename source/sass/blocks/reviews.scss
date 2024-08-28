@@ -4,7 +4,6 @@
 .reviews__wrapper {
   @include mixins.mobile {
     padding-top: 38px;
-    padding-bottom: 20px;
   }
 
   @include mixins.desktop {

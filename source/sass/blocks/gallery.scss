@@ -8,7 +8,7 @@
 
 .gallery__header {
   @include mixins.mobile {
-    padding: 15px 15px 0 15px;
+    padding: 21px 15px 0 15px;
     margin-bottom: 27px;
   }
 
@@ -84,7 +84,7 @@
   @include mixins.list-base;
 
   @include mixins.mobile {
-    max-height: 260px;
+    max-height: 268px;
   }
 
   @include mixins.desktop {
@@ -100,7 +100,7 @@
   display: grid;
 
   @include mixins.mobile {
-    grid-template-rows: 149px 110px;
+    grid-template-rows: 133px 125px;
     gap: 7px;
   }
 
@@ -118,5 +118,4 @@
 .gallery__image {
   width: 100%;
   object-fit: cover;
-  height: 100%;
 }

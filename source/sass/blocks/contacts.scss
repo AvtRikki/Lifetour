@@ -3,7 +3,7 @@
 
 .contacts__wrapper {
   @include mixins.mobile {
-    padding-top: 36px;
+    padding-top: 34px;
   }
 
   @include mixins.tablet {
@@ -126,7 +126,7 @@
 .contacts__item-header {
   @include mixins.font-info(14px, 14px, 600);
 
-  margin: 0 0 8px 32px;
+  margin: 0 0 6px 32px;
 }
 
 .contacts__item-content {
@@ -173,7 +173,7 @@
   position: relative;
 
   @include mixins.mobile {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   @include mixins.tablet {
@@ -197,8 +197,8 @@
     background-color: variables.$icons-color-secondary;
 
     @include mixins.mobile {
-      top: calc(50% - 5px);
-      left: calc(50% + 40px);
+      top: calc(50% - 2px);
+      left: calc(50% + 38px);
     }
 
     @include mixins.tablet {

@@ -106,8 +106,7 @@
 .tours__info-item--place {
   position: relative;
   margin: 0;
-  padding: 10px 11px 11px 33px;
-  min-height: 35px;
+  padding: 8px 11px 8px 34px;
 
   &:before {
     left: 12px;
@@ -135,10 +134,10 @@
 .tours__info-item--days {
   position: relative;
   margin: 0;
-  padding: 8px 0 8px 32px;
+  padding: 8px 0 8px 22px;
 
   &:before {
-    left: 0;
+    left: -10px;
     width: 20px;
     mask: url("/__spritemap#sprite-sun-view");
   }
@@ -159,14 +158,14 @@
 .tours__title {
   @include mixins.font-info(24px, 28px, 700);
 
-  margin: 12px 0 18px;
+  margin: 14px 0 17px;
 }
 
 .tours__additional-details {
   display: flex;
   gap: 8px;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .tours__slider {
