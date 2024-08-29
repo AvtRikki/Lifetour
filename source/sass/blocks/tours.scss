@@ -81,10 +81,9 @@
 
 .tours__info {
   display: flex;
-  justify-content: space-between;
   align-content: flex-start;
   flex-wrap: wrap;
-  row-gap: 12px;
+  gap: 14px;
 }
 
 .tours__info-item {
@@ -105,7 +104,7 @@
 
 .tours__info-item--place {
   position: relative;
-  margin: 0;
+  margin: 0 auto 0 0;
   padding: 8px 11px 8px 34px;
 
   &:before {

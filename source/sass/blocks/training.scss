@@ -48,10 +48,9 @@
 }
 
 .training__header + p {
-  margin: 0 0 29px;
-
   @include mixins.mobile {
     @include mixins.font-info(14px, 20px);
+    margin: 0 0 29px;
   }
 
   @include mixins.tablet {
@@ -254,11 +253,15 @@
 .training__process-item {
   position: relative;
   min-height: auto;
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
 
   @include mixins.mobile {
     @include mixins.font-info(12px, 18px);
 
     padding: 0 0 0 63px;
+    background-position: 29px 1px;
+
     &::after {
       content: "";
       position: absolute;
@@ -275,6 +278,7 @@
     @include mixins.font-info(14px, 22px);
 
     padding: 0 0 0 35px;
+    background-position: 0 1px;
   }
 
   @include mixins.desktop {
@@ -304,25 +308,21 @@
 }
 
 .training__process-item--map {
-  background: url("/__spritemap#sprite-map-view") no-repeat 0 1px;
-  background-size: 25px 25px;
+  background-image: url("/__spritemap#sprite-map-view");
   grid-area: map;
 }
 
 .training__process-item--boot {
-  background: url("/__spritemap#sprite-boots-view") no-repeat 0 1px;
-  background-size: 25px 25px;
+  background-image: url("/__spritemap#sprite-boots-view");
   grid-area: boot;
 }
 
 .training__process-item--forest {
-  background: url("/__spritemap#sprite-forest-view") no-repeat 0 1px;
-  background-size: 25px 25px;
+  background-image: url("/__spritemap#sprite-forest-view");
   grid-area: forest;
 }
 
 .training__process-item--mountains {
-  background: url("/__spritemap#sprite-hills-view") no-repeat 0 1px;
-  background-size: 25px 25px;
+  background-image: url("/__spritemap#sprite-hills-view");
   grid-area: mountains;
 }
