@@ -99,7 +99,7 @@
 
     @include mixins.tablet {
       @include mixins.font-info(16px, 24px);
-      margin: 0 auto 25px;
+      margin: 0 auto 24px;
     }
 
     @include mixins.desktop {
@@ -130,7 +130,7 @@
   }
 
   @include mixins.tablet {
-    padding: 20px 30px;
+    padding: 17px 30px;
     margin-bottom: 11px;
   }
 

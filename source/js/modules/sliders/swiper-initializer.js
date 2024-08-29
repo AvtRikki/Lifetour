@@ -197,6 +197,7 @@ export class SwiperInitializer {
         768: {
           allowTouchMove: true,
           slidesPerView: 3,
+          spaceBetween: 5,
         },
         1440: {
           allowTouchMove: false,

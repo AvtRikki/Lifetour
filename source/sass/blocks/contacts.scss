@@ -124,9 +124,15 @@
 }
 
 .contacts__item-header {
-  @include mixins.font-info(14px, 14px, 600);
+  margin: 0 0 7px 35px;
 
-  margin: 0 0 6px 32px;
+  @include mixins.mobile {
+    @include mixins.font-info(14px, 14px, 600);
+  }
+
+  @include mixins.tablet {
+    @include mixins.font-info(16px, 16px, 600);
+  }
 }
 
 .contacts__item-content {
@@ -177,7 +183,7 @@
   }
 
   @include mixins.tablet {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 
   @include mixins.desktop {
@@ -204,6 +210,9 @@
     @include mixins.tablet {
       top: calc(50% + 10px);
       left: calc(50% + 6px);
+      width: 32px;
+      height: 36px;
+      mask-size: 42px 42px;
     }
   }
 }

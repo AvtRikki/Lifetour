@@ -13,7 +13,7 @@
   }
 
   @include mixins.tablet {
-    padding: 40px 45px 0 45px;
+    padding: 36px 45px 0 45px;
 
     &:before {
         padding-left: 40px;
@@ -42,12 +42,12 @@
   @include mixins.tablet {
     display: flex;
     justify-content: space-between;
-    padding: 20px 45px 21px 45px;
+    padding: 30px 45px 21px 45px;
 
     & p {
       @include mixins.font-info(14px, 22px);
 
-      max-width: 380px;
+      max-width: 382px;
       margin: 0;
     }
   }
@@ -106,7 +106,7 @@
 
   @include mixins.tablet {
     grid-template-rows: 210px 202px;
-    gap: 5px;
+    gap: 6px;
   }
 
   @include mixins.desktop {

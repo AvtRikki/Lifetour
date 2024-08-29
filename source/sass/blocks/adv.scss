@@ -108,7 +108,7 @@
   @include mixins.tablet {
     justify-content: start;
     max-width: 324px;
-    padding: 30px 20px;
+    padding: 30px 19px;
   }
 
   @include mixins.desktop {
@@ -171,7 +171,7 @@
     @include mixins.tablet {
       @include mixins.font-info(16px, 16px, 600);
 
-      margin-top: 73px;
+      margin-top: 72px;
     }
   }
 
@@ -204,8 +204,15 @@
   mask: url("/__spritemap#sprite-path-view");
 }
 
-.adv__item--nature:after {
-  mask: url("/__spritemap#sprite-leaf-view");
+.adv__item--nature {
+  @include mixins.tablet {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+
+  &:after {
+    mask: url("/__spritemap#sprite-leaf-view");
+  }
 }
 
 .adv__pagination {

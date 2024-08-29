@@ -12,7 +12,7 @@
   }
 
   @include mixins.tablet {
-    padding: 34px 45px 20px 45px;
+    padding: 32px 45px 20px 45px;
   }
 
   @include mixins.desktop {
@@ -40,6 +40,11 @@
     color: variables.$font-color-disabled;
   }
 
+  @include mixins.tablet {
+    margin-top: 3px;
+    margin-right: 16px;
+  }
+
   @include mixins.desktop {
     margin-right: 114px;
   }
@@ -58,7 +63,7 @@
 
   @include mixins.tablet {
     flex-direction: row;
-    margin-bottom: 34px;
+    margin-bottom: 29px;
     gap: 23px;
   }
 
