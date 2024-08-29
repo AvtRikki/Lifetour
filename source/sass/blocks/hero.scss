@@ -2,12 +2,12 @@
 @use "../common/mixins.scss";
 
 .hero {
-  background-color: variables.$background-color-secondary;
   color: variables.$font-color-accent;
 }
 
 .hero__container {
   position: relative;
+  background-color: variables.$background-color-secondary;
   max-width: variables.$view-port-desktop-wide;
   margin: 0 auto;
 }
@@ -195,6 +195,7 @@
   @include mixins.tablet {
     min-height: 1034px;
     align-items: center;
+
   }
 
   @include mixins.desktop {
@@ -218,7 +219,7 @@
     @include mixins.tablet {
       @include mixins.font-info(56px, 56px, 800);
 
-      margin: 0 0 15px;
+      margin: -16px 0 15px;
       text-align: center;
     }
 

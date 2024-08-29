@@ -32,7 +32,7 @@
   }
 
   @include mixins.tablet {
-    padding-top: 60px;
+    padding-top: 69px;
     padding-bottom: 40px;
   }
 }
@@ -43,7 +43,7 @@
   }
 
   @include mixins.tablet {
-    margin-bottom: 36px;
+    margin-bottom: 34px;
   }
 }
 
@@ -56,6 +56,8 @@
 
   @include mixins.tablet {
     @include mixins.font-info(16px, 24px);
+
+    margin-bottom: 30px;
   }
 
   @include mixins.desktop {
@@ -100,6 +102,7 @@
   @include mixins.tablet {
     display: flex;
     gap: 4px;
+    margin-top: -3px;
   }
 }
 
@@ -118,7 +121,7 @@
 
 .training__slider {
   @include mixins.tablet {
-    margin-bottom: 10px;
+    margin-bottom: 11px;
   }
 
   @include mixins.desktop {
@@ -188,7 +191,7 @@
 
   @include mixins.tablet {
     @include mixins.font-info(18px, 18px, 700);
-    margin: 0 0 104px;
+    margin: 0 0 100px;
   }
 
   @include mixins.desktop {
@@ -223,7 +226,8 @@
     display: grid;
     grid-template-areas: 'map mountains'
                          'boot forest';
-    gap: 104px;
+    row-gap: 104px;
+    column-gap: 134px;
   }
 
   @include mixins.desktop {
@@ -249,12 +253,12 @@
 
 .training__process-item {
   position: relative;
-  padding: 0 0 0 63px;
   min-height: auto;
 
   @include mixins.mobile {
     @include mixins.font-info(12px, 18px);
 
+    padding: 0 0 0 63px;
     &::after {
       content: "";
       position: absolute;
@@ -269,6 +273,8 @@
 
   @include mixins.tablet {
     @include mixins.font-info(14px, 22px);
+
+    padding: 0 0 0 35px;
   }
 
   @include mixins.desktop {
@@ -298,25 +304,25 @@
 }
 
 .training__process-item--map {
-  background: url("/__spritemap#sprite-map-view") no-repeat 29px 1px;
+  background: url("/__spritemap#sprite-map-view") no-repeat 0 1px;
   background-size: 25px 25px;
   grid-area: map;
 }
 
 .training__process-item--boot {
-  background: url("/__spritemap#sprite-boots-view") no-repeat 29px 1px;
+  background: url("/__spritemap#sprite-boots-view") no-repeat 0 1px;
   background-size: 25px 25px;
   grid-area: boot;
 }
 
 .training__process-item--forest {
-  background: url("/__spritemap#sprite-forest-view") no-repeat 29px 1px;
+  background: url("/__spritemap#sprite-forest-view") no-repeat 0 1px;
   background-size: 25px 25px;
   grid-area: forest;
 }
 
 .training__process-item--mountains {
-  background: url("/__spritemap#sprite-hills-view") no-repeat 29px 1px;
+  background: url("/__spritemap#sprite-hills-view") no-repeat 0 1px;
   background-size: 25px 25px;
   grid-area: mountains;
 }

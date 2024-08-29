@@ -45,6 +45,10 @@
     display: block;
   }
 
+  @include mixins.tablet {
+    margin-top: -3px;
+  }
+
   @include mixins.desktop {
     display: none;
   }
@@ -79,7 +83,7 @@
   cursor: pointer;
 
   @include mixins.tablet {
-    padding-left: 100px;
+    padding-left: 113px;
   }
 
   @include mixins.desktop {
