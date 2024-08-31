@@ -12,13 +12,13 @@ export class FormValidator {
       const emailField = document.querySelector('input[name="email"]');
 
       if (phoneField) {
-        phoneField.addEventListener('keydown', (e) => {
+        phoneField.addEventListener('keydown', () => {
           phoneField.classList.remove(this.#INVALID_INPUT_CLASS_NAME);
         });
       }
 
       if (emailField) {
-        emailField.addEventListener('keydown', (e) => {
+        emailField.addEventListener('keydown', () => {
           emailField.classList.remove(this.#INVALID_INPUT_CLASS_NAME);
         });
       }

@@ -1,5 +1,5 @@
-@use "../common/variables.scss";
-@use "../common/mixins.scss";
+@use "../common/variables";
+@use "../common/mixins";
 
 .about__wrapper {
   max-width: variables.$view-port-desktop-wide;
@@ -52,61 +52,22 @@
     margin-top: 54px;
   }
 
-  & h2 {
-    position: relative;
-
-    @include mixins.mobile {
-      @include mixins.font-info(22px, 22px, 800);
-      margin: 0 0 42px;
-    }
-
-    @include mixins.tablet {
-      @include mixins.font-info(25px, 25px, 800);
-      margin: 0 0 48px;
-    }
-
-    @include mixins.desktop {
-      @include mixins.font-info(35px, 35px, 800);
-      margin-bottom: 58px;
-    }
-  }
-
-  & h2:before {
-    content: attr(data-title);
-    width: max-content;
-    position: absolute;
-    left: 0;
-    opacity: .03;
-
-    @include mixins.mobile {
-      @include mixins.font-info(26px, 26px, 800);
-      bottom: 12px;
-    }
-
-    @include mixins.tablet {
-      @include mixins.font-info(40px, 40px, 800);
-      bottom: 0;
-    }
-
-    @include mixins.tablet {
-      @include mixins.font-info(55px, 55px, 800);
-      bottom: 0;
-    }
-  }
-
   h3 {
     @include mixins.mobile {
       @include mixins.font-info(16px, 16px, 700);
+
       margin: 0 0 13px;
     }
 
     @include mixins.tablet {
       @include mixins.font-info(18px, 18px, 700);
+
       margin: 0 0 12px;
     }
 
     @include mixins.desktop {
       @include mixins.font-info(21px, 21px, 700);
+
       margin: 0 0 16px;
     }
   }
@@ -130,5 +91,52 @@
   p:last-child {
     margin: 0;
   }
+}
 
+.about__info h2 {
+  position: relative;
+
+  @include mixins.mobile {
+    @include mixins.font-info(22px, 22px, 800);
+
+    margin: 0 0 42px;
+  }
+
+  @include mixins.tablet {
+    @include mixins.font-info(25px, 25px, 800);
+
+    margin: 0 0 48px;
+  }
+
+  @include mixins.desktop {
+    @include mixins.font-info(35px, 35px, 800);
+
+    margin-bottom: 58px;
+  }
+}
+
+.about__info h2::before {
+  content: attr(data-title);
+  width: max-content;
+  position: absolute;
+  left: 0;
+  opacity: 0.03;
+
+  @include mixins.mobile {
+    @include mixins.font-info(26px, 26px, 800);
+
+    bottom: 12px;
+  }
+
+  @include mixins.tablet {
+    @include mixins.font-info(40px, 40px, 800);
+
+    bottom: 0;
+  }
+
+  @include mixins.tablet {
+    @include mixins.font-info(55px, 55px, 800);
+
+    bottom: 0;
+  }
 }

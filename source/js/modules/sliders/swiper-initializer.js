@@ -58,7 +58,8 @@ export class SwiperInitializer {
       pagination: {
         el: '[data-pagination="hero"]',
         type: 'bullets',
-        clickable: true
+        clickable: true,
+        bulletActiveClass: 'hero__pagination-slide--active'
       },
       breakpoints: {
         320: {

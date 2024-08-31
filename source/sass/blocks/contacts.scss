@@ -1,5 +1,5 @@
-@use "../common/variables.scss";
-@use "../common/mixins.scss";
+@use "../common/variables";
+@use "../common/mixins";
 
 .contacts__wrapper {
   @include mixins.mobile {
@@ -49,26 +49,26 @@
   @include mixins.desktop {
     margin-bottom: -3px;
   }
+}
 
-  & + p {
-    @include mixins.mobile {
-      @include mixins.font-info(14px, 20px);
+.contacts__header + p {
+  @include mixins.mobile {
+    @include mixins.font-info(14px, 20px);
 
-      margin: 0 0 30px;
-    }
+    margin: 0 0 30px;
+  }
 
-    @include mixins.tablet {
-      @include mixins.font-info(16px, 24px);
+  @include mixins.tablet {
+    @include mixins.font-info(16px, 24px);
 
-      margin: 0 0 40px;
-      max-width: 480px;
-    }
+    margin: 0 0 40px;
+    max-width: 480px;
+  }
 
-    @include mixins.desktop {
-      @include mixins.font-info(16px, 24px);
+  @include mixins.desktop {
+    @include mixins.font-info(16px, 24px);
 
-      margin: 0 0 24px;
-    }
+    margin: 0 0 24px;
   }
 }
 
@@ -98,8 +98,8 @@
 .contacts__item {
   position: relative;
 
-  &:after {
-    content: '';
+  &::after {
+    content: "";
     position: absolute;
     width: 20px;
     height: 20px;
@@ -109,7 +109,7 @@
   }
 
   @include mixins.desktop {
-    &:after {
+    &::after {
       top: 11px;
       width: 26px;
       height: 26px;
@@ -119,19 +119,19 @@
 }
 
 .contacts__item--phone {
-  &:after {
+  &::after {
     mask: url("/__spritemap#sprite-phone-view");
   }
 }
 
 .contacts__item--email {
-  &:after {
+  &::after {
     mask: url("/__spritemap#sprite-mail-view");
   }
 }
 
 .contacts__item--address {
-  &:after {
+  &::after {
     mask: url("/__spritemap#sprite-pin-stroke-view");
   }
 }
@@ -167,6 +167,7 @@
 
   @include mixins.desktop {
     @include mixins.font-info(16px, 24px);
+
     margin-left: 56px;
   }
 }
@@ -215,8 +216,8 @@
     margin-bottom: 0;
   }
 
-  &:after {
-    content: '';
+  &::after {
+    content: "";
     position: absolute;
     display: block;
     width: 28px;
@@ -224,7 +225,7 @@
     mask: url("/__spritemap#sprite-pin-filled-view");
     mask-position: center;
     mask-repeat: no-repeat;
-    mask-size:contain;
+    mask-size: contain;
     background-color: variables.$icons-color-secondary;
 
     @include mixins.mobile {

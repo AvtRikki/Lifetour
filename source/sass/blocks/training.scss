@@ -1,5 +1,5 @@
-@use "../common/variables.scss";
-@use "../common/mixins.scss";
+@use "../common/variables";
+@use "../common/mixins";
 
 .training {
   @include mixins.tablet {
@@ -8,15 +8,15 @@
     background-position: 100% 620px;
     background-image:
       image-set(
-          "../img/decorations/clouds-2-tablet@1x.webp" type("image/webp"),
-          "../img/decorations/clouds-2-tablet@1x.jpg" type("image/jpeg")
+        "../img/decorations/clouds-2-tablet@1x.webp" type("image/webp"),
+        "../img/decorations/clouds-2-tablet@1x.jpg" type("image/jpeg")
       );
 
     @media (resolution >= 2dppx) {
       background-image:
         image-set(
-            "../img/decorations/clouds-2-tablet@2x.webp" type("image/webp"),
-            "../img/decorations/clouds-2-tablet@2x.png" type("image/png")
+          "../img/decorations/clouds-2-tablet@2x.webp" type("image/webp"),
+          "../img/decorations/clouds-2-tablet@2x.png" type("image/png")
         );
     }
   }
@@ -54,6 +54,7 @@
 .training__header + p {
   @include mixins.mobile {
     @include mixins.font-info(14px, 20px);
+
     margin: 0 0 29px;
   }
 
@@ -144,24 +145,23 @@
   display: grid;
   grid-template-columns: 1fr 24px;
   padding-top: 10px;
+}
 
-  & h4 {
-    @include mixins.font-info(14px, 16px, 700);
+.training__details h4 {
+  @include mixins.font-info(14px, 16px, 700);
 
-    display: inline-block;
-    max-width: 100px;
-    margin: 1px 0 14px;
-    grid-column: 1/2;
+  display: inline-block;
+  max-width: 100px;
+  margin: 1px 0 14px;
+  grid-column: 1/2;
+}
 
-  }
+.training__details p {
+  @include mixins.font-info(12px, 16px);
 
-  & p {
-    @include mixins.font-info(12px, 16px);
-
-    margin: 0;
-    grid-column: 1/-1;
-    order: 2;
-  }
+  margin: 0;
+  grid-column: 1/-1;
+  order: 2;
 }
 
 .training__socials {
@@ -191,16 +191,19 @@
 .training__process-header {
   @include mixins.mobile {
     @include mixins.font-info(16px, 16px, 700);
+
     margin: 0 0 23px;
   }
 
   @include mixins.tablet {
     @include mixins.font-info(18px, 18px, 700);
+
     margin: 0 0 100px;
   }
 
   @include mixins.desktop {
     @include mixins.font-info(21px, 21px, 700);
+
     margin: 0 0 23px;
   }
 }
@@ -229,15 +232,16 @@
 
   @include mixins.tablet {
     display: grid;
-    grid-template-areas: 'map mountains'
-                         'boot forest';
+    grid-template-areas:
+      "map  mountains"
+      "boot forest";
     row-gap: 104px;
     column-gap: 134px;
   }
 
   @include mixins.desktop {
     grid-template-columns: 254px 254px 254px 254px;
-    grid-template-areas: 'map boot forest mountains';
+    grid-template-areas: "map boot forest mountains";
     gap: 0;
     margin-right: 20px;
 
@@ -289,6 +293,7 @@
 
   @include mixins.desktop {
     @include mixins.font-info(16px, 24px);
+
     background-position: 10px 5px;
     padding: 3px 0 0 44px;
 

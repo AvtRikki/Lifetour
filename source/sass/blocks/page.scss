@@ -1,5 +1,5 @@
-@use "../common/variables.scss";
-@use "../common/mixins.scss";
+@use "../common/variables";
+@use "../common/mixins";
 
 .page {
   box-sizing: border-box;
@@ -30,15 +30,15 @@
     background-position: 100% 578px;
     background-image:
       image-set(
-          "../img/decorations/clouds-mobile@1x.webp" type("image/webp"),
-          "../img/decorations/clouds-mobile@1x.jpg" type("image/jpeg")
+        "../img/decorations/clouds-mobile@1x.webp" type("image/webp"),
+        "../img/decorations/clouds-mobile@1x.jpg" type("image/jpeg")
       );
 
     @media (resolution >= 2dppx) {
       background-image:
         image-set(
-            "../img/decorations/clouds-mobile@2x.webp" type("image/webp"),
-            "../img/decorations/clouds-mobile@2x.png" type("image/png")
+          "../img/decorations/clouds-mobile@2x.webp" type("image/webp"),
+          "../img/decorations/clouds-mobile@2x.png" type("image/png")
         );
     }
   }
@@ -48,15 +48,15 @@
     background-position: 100% 1033px;
     background-image:
       image-set(
-          "../img/decorations/clouds-1-tablet@1x.webp" type("image/webp"),
-          "../img/decorations/clouds-1-tablet@1x.jpg" type("image/jpeg")
+        "../img/decorations/clouds-1-tablet@1x.webp" type("image/webp"),
+        "../img/decorations/clouds-1-tablet@1x.jpg" type("image/jpeg")
       );
 
     @media (resolution >= 2dppx) {
       background-image:
         image-set(
-            "../img/decorations/clouds-1-tablet@2x.webp" type("image/webp"),
-            "../img/decorations/clouds-1-tablet@2x.png" type("image/png")
+          "../img/decorations/clouds-1-tablet@2x.webp" type("image/webp"),
+          "../img/decorations/clouds-1-tablet@2x.png" type("image/png")
         );
     }
   }
@@ -66,15 +66,15 @@
     background-position: 100% 673px;
     background-image:
       image-set(
-          "../img/decorations/clouds-1-desktop@1x.webp" type("image/webp"),
-          "../img/decorations/clouds-1-desktop@1x.jpg" type("image/jpeg")
+        "../img/decorations/clouds-1-desktop@1x.webp" type("image/webp"),
+        "../img/decorations/clouds-1-desktop@1x.jpg" type("image/jpeg")
       );
 
     @media (resolution >= 2dppx) {
       background-image:
         image-set(
-            "../img/decorations/clouds-1-desktop@2x.webp" type("image/webp"),
-            "../img/decorations/clouds-1-desktop@2x.png" type("image/png")
+          "../img/decorations/clouds-1-desktop@2x.webp" type("image/webp"),
+          "../img/decorations/clouds-1-desktop@2x.png" type("image/png")
         );
     }
   }
@@ -116,25 +116,28 @@
   }
 }
 
-.page__header:before {
+.page__header::before {
   content: attr(data-title);
   width: max-content;
   position: absolute;
   left: 0;
-  opacity: .03;
+  opacity: 0.03;
 
   @include mixins.mobile {
     @include mixins.font-info(26px, 26px, 800);
+
     bottom: 12px;
   }
 
   @include mixins.tablet {
     @include mixins.font-info(40px, 40px, 800);
+
     bottom: 0;
   }
 
   @include mixins.desktop {
     @include mixins.font-info(55px, 55px, 800);
+
     bottom: 0;
   }
 }

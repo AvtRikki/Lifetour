@@ -1,5 +1,5 @@
-@use "../common/variables.scss";
-@use "../common/mixins.scss";
+@use "../common/variables";
+@use "../common/mixins";
 
 .gallery__wrapper {
   max-width: variables.$view-port-desktop-wide;
@@ -8,22 +8,22 @@
 
 .gallery__header {
   @include mixins.mobile {
-    padding: 21px 15px 0 15px;
+    padding: 21px 15px 0;
     margin-bottom: 27px;
   }
 
   @include mixins.tablet {
-    padding: 36px 45px 0 45px;
+    padding: 36px 45px 0;
 
-    &:before {
-        padding-left: 40px;
-      }
+    &::before {
+      padding-left: 40px;
+    }
   }
 
   @include mixins.desktop {
-    padding: 121px 120px 0 120px;
+    padding: 121px 120px 0;
 
-    &:before {
+    &::before {
       padding-left: 120px;
     }
   }
@@ -31,36 +31,39 @@
 
 .gallery__description {
   @include mixins.mobile {
-    padding: 0 15px 29px 15px;
-    & p {
-      @include mixins.font-info(12px, 18px);
-
-      margin: 0;
-    }
+    padding: 0 15px 29px;
   }
 
   @include mixins.tablet {
     display: flex;
     justify-content: space-between;
-    padding: 30px 45px 21px 45px;
-
-    & p {
-      @include mixins.font-info(14px, 22px);
-
-      max-width: 382px;
-      margin: 0;
-    }
+    padding: 30px 45px 21px;
   }
 
   @include mixins.desktop {
-    padding: 23px 120px 47px 120px;
+    padding: 23px 120px 47px;
+  }
+}
 
-    & p {
-      @include mixins.font-info(16px, 24px);
+.gallery__description p {
+  @include mixins.mobile {
+    @include mixins.font-info(12px, 18px);
 
-      max-width: 596px;
-      margin: 0;
-    }
+    margin: 0;
+  }
+
+  @include mixins.tablet {
+    @include mixins.font-info(14px, 22px);
+
+    max-width: 382px;
+    margin: 0;
+  }
+
+  @include mixins.desktop {
+    @include mixins.font-info(16px, 24px);
+
+    max-width: 596px;
+    margin: 0;
   }
 }
 

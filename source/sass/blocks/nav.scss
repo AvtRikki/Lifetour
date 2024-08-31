@@ -1,5 +1,5 @@
-@use "../common/variables.scss";
-@use "../common/mixins.scss";
+@use "../common/variables";
+@use "../common/mixins";
 
 .nav {
   @include mixins.mobile {
@@ -47,16 +47,19 @@
 .nav__link {
   @include mixins.mobile {
     @include mixins.font-info(14px, 14px, 700);
+
     text-transform: uppercase;
   }
 
   @include mixins.tablet {
     @include mixins.font-info(16px, 16px, 700);
+
     text-transform: uppercase;
   }
 
   @include mixins.desktop {
     @include mixins.font-info(16px, 16px);
+
     text-transform: capitalize;
   }
 

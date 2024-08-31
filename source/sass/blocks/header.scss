@@ -1,5 +1,5 @@
-@use "../common/variables.scss";
-@use "../common/mixins.scss";
+@use "../common/variables";
+@use "../common/mixins";
 
 .header {
   background-color: variables.$background-color-secondary;
@@ -126,6 +126,7 @@
 
   @include mixins.desktop {
     @include mixins.font-info(18px, 18px, 600);
+
     order: 2;
   }
 

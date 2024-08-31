@@ -1,8 +1,9 @@
-@use "../common/variables.scss";
-@use "../common/mixins.scss";
+@use "../common/variables";
+@use "../common/mixins";
 
 .footer-nav__items {
   @include mixins.list-base;
+
   margin: 0 auto;
 
   @include mixins.mobile {

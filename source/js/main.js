@@ -1,6 +1,6 @@
 import { SwiperInitializer } from './modules/sliders/swiper-initializer.js';
 import { NavigationManager } from './modules/navigations/menu-manager.js';
-import {FormValidator} from "./modules/form/form-validator.js";
+import {FormValidator} from './modules/form/form-validator.js';
 
 const heroSlider = new SwiperInitializer('hero__slider');
 const heroOptions = heroSlider.createHeroOptions();

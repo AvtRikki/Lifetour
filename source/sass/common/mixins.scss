@@ -1,4 +1,4 @@
-@use "./variables.scss";
+@use "./variables";
 
 @mixin font-face($font-family, $font-weight, $font-style, $font-woff2-src, $font-woff-src) {
   @font-face {

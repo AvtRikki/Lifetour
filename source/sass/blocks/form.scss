@@ -1,5 +1,5 @@
-@use "../common/variables.scss";
-@use "../common/mixins.scss";
+@use "../common/variables";
+@use "../common/mixins";
 
 .form {
   max-width: variables.$view-port-desktop-wide;
@@ -12,15 +12,15 @@
   @include mixins.mobile {
     background-image:
       image-set(
-          "../img/form/form-mobile@1x.webp" type("image/webp"),
-          "../img/form/form-mobile@1x.jpg" type("image/jpeg")
+        "../img/form/form-mobile@1x.webp" type("image/webp"),
+        "../img/form/form-mobile@1x.jpg" type("image/jpeg")
       );
 
     @media (resolution >= 2dppx) {
       background-image:
         image-set(
-            "../img/form/form-mobile@2x.webp" type("image/webp"),
-            "../img/form/form-mobile@2x.png" type("image/png")
+          "../img/form/form-mobile@2x.webp" type("image/webp"),
+          "../img/form/form-mobile@2x.png" type("image/png")
         );
     }
   }
@@ -28,15 +28,15 @@
   @include mixins.tablet {
     background-image:
       image-set(
-          "../img/form/form-tablet@1x.webp" type("image/webp"),
-          "../img/form/form-tablet@1x.jpg" type("image/jpeg")
+        "../img/form/form-tablet@1x.webp" type("image/webp"),
+        "../img/form/form-tablet@1x.jpg" type("image/jpeg")
       );
 
     @media (resolution >= 2dppx) {
       background-image:
         image-set(
-            "../img/form/form-tablet@2x.webp" type("image/webp"),
-            "../img/form/form-tablet@2x.png" type("image/png")
+          "../img/form/form-tablet@2x.webp" type("image/webp"),
+          "../img/form/form-tablet@2x.png" type("image/png")
         );
     }
   }
@@ -44,15 +44,15 @@
   @include mixins.desktop {
     background-image:
       image-set(
-          "../img/form/form-desktop@1x.webp" type("image/webp"),
-          "../img/form/form-desktop@1x.jpg" type("image/jpeg")
+        "../img/form/form-desktop@1x.webp" type("image/webp"),
+        "../img/form/form-desktop@1x.jpg" type("image/jpeg")
       );
 
     @media (resolution >= 2dppx) {
       background-image:
         image-set(
-            "../img/form/form-desktop@2x.webp" type("image/webp"),
-            "../img/form/form-desktop@2x.png" type("image/png")
+          "../img/form/form-desktop@2x.webp" type("image/webp"),
+          "../img/form/form-desktop@2x.png" type("image/png")
         );
     }
   }
@@ -75,43 +75,48 @@
     flex-direction: column;
     justify-content: center;
   }
+}
 
-  & h2 {
-    text-align: center;
+.form__wrapper h2 {
+  text-align: center;
 
-    @include mixins.mobile {
-      @include mixins.font-info(22px, 22px, 800);
-      margin: 0 0 17px 0;
-    }
+  @include mixins.mobile {
+    @include mixins.font-info(22px, 22px, 800);
 
-    @include mixins.tablet {
-      @include mixins.font-info(25px, 25px, 800);
-      margin: 0 0 25px 0;
-    }
-
-    @include mixins.desktop {
-      @include mixins.font-info(35px, 35px, 800);
-      margin: 17px 0 15px 0;
-    }
+    margin: 0 0 17px;
   }
 
-  & p {
-    text-align: center;
+  @include mixins.tablet {
+    @include mixins.font-info(25px, 25px, 800);
 
-    @include mixins.mobile {
-      @include mixins.font-info(12px, 18px);
-      max-width: 220px;
-      margin: 0 auto 20px;
-    }
+    margin: 0 0 25px;
+  }
 
-    @include mixins.tablet {
-      @include mixins.font-info(16px, 24px);
-      margin: 0 auto 24px;
-    }
+  @include mixins.desktop {
+    @include mixins.font-info(35px, 35px, 800);
 
-    @include mixins.desktop {
-      margin-bottom: 41px;
-    }
+    margin: 17px 0 15px;
+  }
+}
+
+.form__wrapper p {
+  text-align: center;
+
+  @include mixins.mobile {
+    @include mixins.font-info(12px, 18px);
+
+    max-width: 220px;
+    margin: 0 auto 20px;
+  }
+
+  @include mixins.tablet {
+    @include mixins.font-info(16px, 24px);
+
+    margin: 0 auto 24px;
+  }
+
+  @include mixins.desktop {
+    margin-bottom: 41px;
   }
 }
 
@@ -171,6 +176,7 @@
 
 .form__button {
   @include mixins.font-info(16px, 16px, 500);
+
   width: 100%;
 
   @include mixins.mobile {
