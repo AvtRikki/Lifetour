@@ -20,6 +20,12 @@
     gap: 16px;
     align-items: center;
   }
+
+  @include mixins.desktop {
+    min-width: 586px;
+    justify-content: space-between;
+    gap: unset;
+  }
 }
 
 .footer-nav__item {
@@ -36,6 +42,10 @@
   border: 1px solid variables.$transparent-color;
   width: fit-content;
   padding: 5px 3px;
+
+  @include mixins.desktop {
+    @include mixins.font-info(16px, 16px);
+  }
 
   &:hover {
     border-bottom-color: variables.$font-color-primary;

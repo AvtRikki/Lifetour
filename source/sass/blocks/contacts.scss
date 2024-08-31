@@ -13,7 +13,7 @@
   @include mixins.desktop {
     display: grid;
     grid-template-columns: 1fr 600px;
-    padding: 100px 120px;
+    padding: 123px 120px 55px;
     column-gap: 100px;
     max-width: variables.$view-port-desktop-wide;
     margin: 0 auto;
@@ -44,6 +44,10 @@
 
   @include mixins.tablet {
     margin-bottom: 20px;
+  }
+
+  @include mixins.desktop {
+    margin-bottom: -3px;
   }
 
   & + p {
@@ -87,7 +91,7 @@
 
   @include mixins.desktop {
     flex-direction: column;
-    gap: 35px;
+    gap: 34px;
   }
 }
 
@@ -102,6 +106,15 @@
     top: 0;
     left: 0;
     background-color: variables.$icons-color-primary;
+  }
+
+  @include mixins.desktop {
+    &:after {
+      top: 11px;
+      width: 26px;
+      height: 26px;
+      mask-size: 26px 26px;
+    }
   }
 }
 
@@ -133,6 +146,12 @@
   @include mixins.tablet {
     @include mixins.font-info(16px, 16px, 600);
   }
+
+  @include mixins.tablet {
+    @include mixins.font-info(18px, 18px, 600);
+
+    margin-left: 56px;
+  }
 }
 
 .contacts__item-content {
@@ -144,6 +163,11 @@
 
   @include mixins.mobile {
     max-width: 180px;
+  }
+
+  @include mixins.desktop {
+    @include mixins.font-info(16px, 24px);
+    margin-left: 56px;
   }
 }
 
@@ -187,6 +211,7 @@
   }
 
   @include mixins.desktop {
+    margin-top: 26px;
     margin-bottom: 0;
   }
 
@@ -213,6 +238,12 @@
       width: 32px;
       height: 36px;
       mask-size: 42px 42px;
+    }
+
+    @include mixins.desktop {
+      top: calc(50% - 42px);
+      left: calc(50% + 68px);
+      mask-size: 50px 50px;
     }
   }
 }

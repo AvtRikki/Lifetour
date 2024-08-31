@@ -60,6 +60,10 @@
   @include mixins.tablet {
     margin-bottom: 60px;
   }
+
+  @include mixins.desktop {
+    margin-bottom: 39px;
+  }
 }
 
 .adv__items {
@@ -227,7 +231,7 @@
   @include mixins.desktop {
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    margin: 0 auto;
+    gap: 4px;
+    margin: 1px auto;
   }
 }

@@ -21,7 +21,7 @@
   }
 
   @include mixins.desktop {
-    padding: 119px 120px 0 120px;
+    padding: 121px 120px 0 120px;
 
     &:before {
       padding-left: 120px;
@@ -53,10 +53,10 @@
   }
 
   @include mixins.desktop {
-    padding: 27px 120px 46px 120px;
+    padding: 23px 120px 47px 120px;
 
     & p {
-      @include mixins.font-info(16px, 28px);
+      @include mixins.font-info(16px, 24px);
 
       max-width: 596px;
       margin: 0;
@@ -77,6 +77,12 @@
 
   @include mixins.desktop {
     display: none;
+  }
+}
+
+.gallery__slider {
+  @include mixins.desktop {
+    margin-bottom: 3px;
   }
 }
 
