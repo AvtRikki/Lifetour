@@ -89,6 +89,7 @@
   @include mixins.desktop {
     padding: 10px 32px;
     order: 1;
+    margin-right: 3px;
   }
 
   &:hover {

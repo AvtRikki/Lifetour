@@ -35,6 +35,10 @@
     padding-top: 69px;
     padding-bottom: 40px;
   }
+
+  @include mixins.desktop {
+    padding-top: 72px;
+  }
 }
 
 .training__header {
@@ -61,7 +65,7 @@
 
   @include mixins.desktop {
     max-width: 820px;
-    margin-bottom: 56px;
+    margin-bottom: 59px;
   }
 }
 
@@ -74,6 +78,10 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+  }
+
+  @include mixins.desktop {
+    margin-bottom: 17px;
   }
 }
 
@@ -119,12 +127,16 @@
 }
 
 .training__slider {
+  @include mixins.mobile {
+    margin-bottom: 10px;
+  }
+
   @include mixins.tablet {
     margin-bottom: 11px;
   }
 
   @include mixins.desktop {
-    margin-bottom: 56px;
+    margin-bottom: 43px;
   }
 }
 
@@ -149,12 +161,6 @@
     margin: 0;
     grid-column: 1/-1;
     order: 2;
-  }
-}
-
-.training__slider {
-  @include mixins.mobile {
-    margin-bottom: 10px;
   }
 }
 
@@ -230,10 +236,10 @@
   }
 
   @include mixins.desktop {
-    display: flex;
-    flex-direction: row;
-    align-self: start;
+    grid-template-columns: 254px 254px 254px 254px;
+    grid-template-areas: 'map boot forest mountains';
     gap: 0;
+    margin-right: 20px;
 
     &::after {
       content: "";
@@ -282,8 +288,9 @@
   }
 
   @include mixins.desktop {
-    max-width: 220px;
-    padding: 0 0 0 45px;
+    @include mixins.font-info(16px, 24px);
+    background-position: 10px 5px;
+    padding: 3px 0 0 44px;
 
     &::after {
       content: "";
@@ -320,6 +327,13 @@
 .training__process-item--forest {
   background-image: url("/__spritemap#sprite-forest-view");
   grid-area: forest;
+
+  @include mixins.desktop {
+    &::after {
+      left: 0;
+      bottom: 0;
+    }
+  }
 }
 
 .training__process-item--mountains {

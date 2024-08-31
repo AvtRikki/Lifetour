@@ -203,7 +203,7 @@
     justify-content: flex-start;
     min-height: 800px;
     margin: 0;
-    padding: 200px 0 80px;
+    padding: 200px 0 77px;
   }
 
   h2 {
@@ -226,7 +226,7 @@
     @include mixins.desktop {
       @include mixins.font-info(77px, 77px, 800);
 
-      margin: 0 0 25px;
+      margin: 0 0 23px;
       text-align: left;
       max-width: 900px;
       z-index: 1;
@@ -244,7 +244,7 @@
     @include mixins.tablet {
       @include mixins.font-info(17px, 24px);
 
-      max-width: 500px;
+      max-width: 462px;
       margin: 0 0 35px;
       text-align: center;
     }

@@ -40,21 +40,24 @@
 
   @include mixins.desktop {
     flex-direction: row;
-    gap: 30px;
+    gap: 13px;
   }
 }
 
 .nav__link {
   @include mixins.mobile {
     @include mixins.font-info(14px, 14px, 700);
+    text-transform: uppercase;
   }
 
   @include mixins.tablet {
     @include mixins.font-info(16px, 16px, 700);
+    text-transform: uppercase;
   }
 
   @include mixins.desktop {
     @include mixins.font-info(16px, 16px);
+    text-transform: capitalize;
   }
 
   display: inline-block;
@@ -62,7 +65,7 @@
   border: 1px solid variables.$transparent-color;
   letter-spacing: 0.04em;
   text-decoration: none;
-  text-transform: uppercase;
+
   color: inherit;
 
   &:hover {
