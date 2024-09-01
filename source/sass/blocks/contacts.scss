@@ -43,7 +43,7 @@
   }
 
   @include mixins.tablet {
-    margin-bottom: 20px;
+    margin-bottom: 21px;
   }
 
   @include mixins.desktop {
@@ -61,7 +61,7 @@
   @include mixins.tablet {
     @include mixins.font-info(16px, 24px);
 
-    margin: 0 0 40px;
+    margin: 0 0 39px;
     max-width: 480px;
   }
 
@@ -87,7 +87,7 @@
   @include mixins.tablet {
     flex-direction: row;
     gap: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 39px;
   }
 
   @include mixins.desktop {
@@ -107,6 +107,13 @@
     top: 0;
     left: 0;
     background-color: variables.$icons-color-primary;
+  }
+
+  @include mixins.tablet {
+    &::after {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   @include mixins.desktop {
@@ -138,20 +145,22 @@
 }
 
 .contacts__item-header {
-  margin: 0 0 7px 35px;
-
   @include mixins.mobile {
     @include mixins.font-info(14px, 14px, 600);
+
+    margin: 0 0 7px 35px;
   }
 
   @include mixins.tablet {
     @include mixins.font-info(16px, 16px, 600);
+
+    margin: 1px 0 6px 34px;
   }
 
-  @include mixins.tablet {
+  @include mixins.desktop {
     @include mixins.font-info(18px, 18px, 600);
 
-    margin-left: 56px;
+    margin: 0 0 7px 33px;
   }
 }
 
