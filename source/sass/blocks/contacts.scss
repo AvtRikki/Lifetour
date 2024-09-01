@@ -3,7 +3,7 @@
 
 .contacts__wrapper {
   @include mixins.mobile {
-    padding-top: 34px;
+    padding-top: 37px;
   }
 
   @include mixins.tablet {
@@ -39,7 +39,7 @@
 
 .contacts__header {
   @include mixins.mobile {
-    margin-bottom: 29px;
+    margin-bottom: 28px;
   }
 
   @include mixins.tablet {
@@ -80,7 +80,7 @@
 
   @include mixins.mobile {
     flex-direction: column;
-    gap: 30px;
+    gap: 0;
     margin-bottom: 30px;
   }
 
@@ -102,8 +102,8 @@
   &::after {
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 21px;
+    height: 21px;
     top: 0;
     left: 0;
     background-color: variables.$icons-color-primary;
@@ -127,12 +127,28 @@
 }
 
 .contacts__item--phone {
+  @include mixins.mobile {
+    margin-bottom: 29px;
+  }
+
+  @include mixins.tablet {
+    margin-bottom: unset;
+  }
+
   &::after {
     mask: url("/__spritemap#sprite-phone-view");
   }
 }
 
 .contacts__item--email {
+  @include mixins.mobile {
+    margin-bottom: 29px;
+  }
+
+  @include mixins.tablet {
+    margin-bottom: unset;
+  }
+
   &::after {
     mask: url("/__spritemap#sprite-mail-view");
   }
@@ -144,11 +160,17 @@
   }
 }
 
+.contacts__item--address .contacts__item-content {
+  @include mixins.mobile {
+    margin: 8px 0 0 32px;
+  }
+}
+
 .contacts__item-header {
   @include mixins.mobile {
     @include mixins.font-info(14px, 14px, 600);
 
-    margin: 0 0 7px 35px;
+    margin: 0 0 7px 32px;
   }
 
   @include mixins.tablet {
@@ -172,6 +194,7 @@
   color: variables.$font-color-primary;
 
   @include mixins.mobile {
+    margin: 0 0 0 31px;
     max-width: 180px;
   }
 
@@ -214,7 +237,7 @@
   position: relative;
 
   @include mixins.mobile {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   @include mixins.tablet {

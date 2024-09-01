@@ -3,7 +3,7 @@
 
 .reviews__wrapper {
   @include mixins.mobile {
-    padding-top: 38px;
+    padding-top: 36px;
   }
 
   @include mixins.tablet {
