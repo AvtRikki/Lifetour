@@ -20,6 +20,8 @@
   @include mixins.desktop {
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
     order: 2;
   }
 }
@@ -29,6 +31,7 @@
 
   display: flex;
   gap: 22px;
+  flex-wrap: wrap;
 
   @include mixins.mobile {
     flex-direction: column;

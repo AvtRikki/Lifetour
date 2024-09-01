@@ -19,8 +19,10 @@
 
   @include mixins.tablet {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    row-gap: 15px;
   }
 }
 
@@ -115,6 +117,7 @@
   grid-column: 3/-1;
   text-decoration: none;
   cursor: pointer;
+  margin-left: auto;
 
   @include mixins.mobile {
     @include mixins.font-info(14px, 14px, 600);

@@ -43,8 +43,8 @@ export class SwiperInitializer {
       });
 
       if (options.navigation) {
-        document.querySelector(options.navigation.nextEl).addEventListener('click', this.#enableLoopState);
-        document.querySelector(options.navigation.prevEl).addEventListener('click', this.#enableLoopState);
+        document.querySelector(options.navigation.nextEl).addEventListener('click', this.#enableLoopState.bind(this));
+        document.querySelector(options.navigation.prevEl).addEventListener('click', this.#enableLoopState.bind(this));
       }
 
       return this.swiper;
@@ -173,10 +173,10 @@ export class SwiperInitializer {
           slidesPerView: 2,
         },
         1440: {
-          slidesPerView: 4,
+          slidesPerView: 5,
           allowTouchMove: false,
           initialSlide: 2,
-          centeredSlides: true,
+          // centeredSlides: true,
         },
       },
     };

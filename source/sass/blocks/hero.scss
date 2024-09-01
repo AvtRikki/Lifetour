@@ -290,6 +290,8 @@
     @include mixins.list-base;
 
     display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
     gap: 10px;
   }
 }
@@ -354,12 +356,14 @@
 
 .hero__pagination {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   position: absolute;
   z-index: 3;
   bottom: 40px;
   left: 50%;
   transform: translateX(-50%);
+  max-width: 300px;
 
   @include mixins.desktop {
     left: auto;

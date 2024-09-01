@@ -19,13 +19,14 @@
   @include mixins.tablet {
     display: flex;
     gap: 16px;
+    flex-wrap: wrap;
     align-items: center;
   }
 
   @include mixins.desktop {
     min-width: 586px;
     justify-content: space-between;
-    gap: unset;
+    column-gap: unset;
   }
 }
 

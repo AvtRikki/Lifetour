@@ -76,6 +76,7 @@
   @include mixins.list-base;
 
   display: flex;
+  flex-wrap: wrap;
 
   @include mixins.mobile {
     flex-direction: column;
@@ -213,7 +214,7 @@
 
   @include mixins.desktop {
     margin-top: 26px;
-    margin-bottom: 0;
+    margin-bottom: auto;
   }
 
   &::after {
@@ -242,8 +243,10 @@
     }
 
     @include mixins.desktop {
-      top: calc(50% - 42px);
-      left: calc(50% + 68px);
+      top: calc(50% - 4px);
+      left: calc(50% + 59px);
+      width: 50px;
+      height: 50px;
       mask-size: 50px 50px;
     }
   }
