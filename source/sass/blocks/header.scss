@@ -24,6 +24,10 @@
     align-items: center;
     row-gap: 15px;
   }
+
+  @include mixins.desktop {
+    padding-top: 32px;
+  }
 }
 
 .header__menu-button--closed::before {
@@ -91,7 +95,7 @@
   @include mixins.desktop {
     padding: 10px 32px;
     order: 1;
-    margin-right: 3px;
+    margin-right: 62px;
   }
 
   &:hover {
@@ -117,7 +121,6 @@
   grid-column: 3/-1;
   text-decoration: none;
   cursor: pointer;
-  margin-left: auto;
 
   @include mixins.mobile {
     @include mixins.font-info(14px, 14px, 600);
@@ -130,6 +133,7 @@
   @include mixins.desktop {
     @include mixins.font-info(18px, 18px, 600);
 
+    margin-left: auto;
     order: 2;
   }
 

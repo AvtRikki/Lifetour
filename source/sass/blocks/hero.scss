@@ -30,160 +30,187 @@
 }
 
 .hero__item--caucasus {
-  background-repeat: no-repeat;
-  background-size: cover;
-
   @include mixins.mobile {
-    background-image:
+    background:
+      variables.$overlay-color-primary,
       image-set(
         "../img/hero/hero-1-mobile@1x.webp" type("image/webp"),
         "../img/hero/hero-1-mobile@1x.jpg" type("image/jpeg")
-      );
+      ) no-repeat;
+    background-size: cover;
 
     @media (resolution >= 2dppx) {
-      background-image:
+      background:
+        variables.$overlay-color-primary,
         image-set(
           "../img/hero/hero-1-mobile@2x.webp" type("image/webp"),
           "../img/hero/hero-1-mobile@2x.png" type("image/png")
-        );
+        ) no-repeat;
+      background-size: cover;
     }
   }
 
   @include mixins.tablet {
-    background-image:
+    background:
+      variables.$overlay-color-primary,
       image-set(
         "../img/hero/hero-1-tablet@1x.webp" type("image/webp"),
         "../img/hero/hero-1-tablet@1x.jpg" type("image/jpeg")
-      );
+      ) no-repeat;
+    background-size: cover;
 
     @media (resolution >= 2dppx) {
-      background-image:
+      background:
+        variables.$overlay-color-primary,
         image-set(
           "../img/hero/hero-1-tablet@2x.webp" type("image/webp"),
           "../img/hero/hero-1-tablet@2x.png" type("image/png")
-        );
+        ) no-repeat;
+      background-size: cover;
     }
   }
 
   @include mixins.desktop {
-    background-image:
+    background:
+      variables.$overlay-color-primary,
       image-set(
         "../img/hero/hero-1-desktop@1x.webp" type("image/webp"),
         "../img/hero/hero-1-desktop@1x.jpg" type("image/jpeg")
-      );
+      ) no-repeat ;
+    background-size: cover;
 
     @media (resolution >= 2dppx) {
-      background-image:
+      background:
+        variables.$overlay-color-primary,
         image-set(
           "../img/hero/hero-1-desktop@2x.webp" type("image/webp"),
           "../img/hero/hero-1-desktop@2x.png" type("image/png")
-        );
+        ) no-repeat;
+      background-size: cover;
     }
   }
 }
 
 .hero__item--kamchatka {
-  background-repeat: no-repeat;
-  background-size: cover;
-
   @include mixins.mobile {
-    background-image:
+    background:
+      variables.$overlay-color-primary,
       image-set(
         "../img/hero/hero-2-mobile@1x.webp" type("image/webp"),
         "../img/hero/hero-2-mobile@1x.jpg" type("image/jpeg")
-      );
+      ) no-repeat;
+    background-size: cover;
 
     @media (resolution >= 2dppx) {
-      background-image:
+      background:
+        variables.$overlay-color-primary,
         image-set(
           "../img/hero/hero-2-mobile@2x.webp" type("image/webp"),
           "../img/hero/hero-2-mobile@2x.png" type("image/png")
-        );
+        ) no-repeat;
+      background-size: cover;
     }
   }
 
   @include mixins.tablet {
-    background-image:
+    background:
+      variables.$overlay-color-primary,
       image-set(
         "../img/hero/hero-2-tablet@1x.webp" type("image/webp"),
         "../img/hero/hero-2-tablet@1x.jpg" type("image/jpeg")
-      );
+      ) no-repeat;
+    background-size: cover;
 
     @media (resolution >= 2dppx) {
-      background-image:
+      background:
+        variables.$overlay-color-primary,
         image-set(
           "../img/hero/hero-2-tablet@2x.webp" type("image/webp"),
           "../img/hero/hero-2-tablet@2x.png" type("image/png")
-        );
+        ) no-repeat;
+      background-size: cover;
     }
   }
 
   @include mixins.desktop {
-    background-image:
+    background:
+      variables.$overlay-color-primary,
       image-set(
         "../img/hero/hero-2-desktop@1x.webp" type("image/webp"),
         "../img/hero/hero-2-desktop@1x.jpg" type("image/jpeg")
-      );
+      ) no-repeat;
+    background-size: cover;
 
     @media (resolution >= 2dppx) {
-      background-image:
+      background:
+        variables.$overlay-color-primary,
         image-set(
           "../img/hero/hero-2-desktop@2x.webp" type("image/webp"),
           "../img/hero/hero-2-desktop@2x.png" type("image/png")
-        );
+        ) no-repeat;
+      background-size: cover;
     }
   }
 }
 
 .hero__item--altai {
-  background-repeat: no-repeat;
-  background-size: cover;
-
   @include mixins.mobile {
-    background-image:
+    background:
+      variables.$overlay-color-primary,
       image-set(
         "../img/hero/hero-3-mobile@1x.webp" type("image/webp"),
         "../img/hero/hero-3-mobile@1x.jpg" type("image/jpeg")
-      );
+      ) no-repeat;
+    background-size: cover;
 
     @media (resolution >= 2dppx) {
-      background-image:
+      background:
+        variables.$overlay-color-primary,
         image-set(
           "../img/hero/hero-3-mobile@2x.webp" type("image/webp"),
           "../img/hero/hero-3-mobile@2x.png" type("image/png")
-        );
+        ) no-repeat;
+      background-size: cover;
     }
   }
 
   @include mixins.tablet {
-    background-image:
+    background:
+      variables.$overlay-color-primary,
       image-set(
         "../img/hero/hero-3-tablet@1x.webp" type("image/webp"),
         "../img/hero/hero-3-tablet@1x.jpg" type("image/jpeg")
-      );
+      ) no-repeat;
+    background-size: cover;
 
     @media (resolution >= 2dppx) {
-      background-image:
+      background:
+        variables.$overlay-color-primary,
         image-set(
           "../img/hero/hero-3-tablet@2x.webp" type("image/webp"),
           "../img/hero/hero-3-tablet@2x.png" type("image/png")
-        );
+        ) no-repeat;
+      background-size: cover;
     }
   }
 
   @include mixins.desktop {
-    background-image:
+    background:
+      variables.$overlay-color-primary,
       image-set(
         "../img/hero/hero-3-desktop@1x.webp" type("image/webp"),
         "../img/hero/hero-3-desktop@1x.jpg" type("image/jpeg")
-      );
+      ) no-repeat;
+    background-size: cover;
 
     @media (resolution >= 2dppx) {
-      background-image:
+      background:
+        variables.$overlay-color-primary,
         image-set(
           "../img/hero/hero-3-desktop@2x.webp" type("image/webp"),
           "../img/hero/hero-3-desktop@2x.png" type("image/png")
-        );
+        ) no-repeat;
+      background-size: cover;
     }
   }
 }

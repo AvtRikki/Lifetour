@@ -21,7 +21,7 @@
   }
 
   @include mixins.desktop {
-    padding: 121px 120px 0;
+    padding: 123px 120px 0;
 
     &::before {
       padding-left: 120px;
@@ -41,7 +41,7 @@
   }
 
   @include mixins.desktop {
-    padding: 23px 120px 47px;
+    padding: 22px 120px 47px;
   }
 }
 

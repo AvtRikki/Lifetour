@@ -12,8 +12,8 @@
   }
 
   @include mixins.desktop {
-    padding-top: 121px;
-    padding-bottom: 100px;
+    padding-top: 120px;
+    padding-bottom: 110px;
   }
 }
 
@@ -30,7 +30,13 @@
   }
 
   @include mixins.desktop {
-    margin-bottom: 52px;
+    margin-bottom: 50px;
+  }
+}
+
+.tours__header {
+  @include mixins.desktop {
+    margin-top: 3px;
   }
 }
 
