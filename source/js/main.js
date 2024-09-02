@@ -20,7 +20,8 @@ reviewSlider.initialize(reviewsOptions);
 
 const advSlider = new SwiperInitializer('adv__slider');
 const advOptions = advSlider.createAdvOptions('adv__pagination-button-prev', 'adv__pagination-button-next');
-advSlider.initialize(advOptions);
+const advCurrentSlider = advSlider.initialize(advOptions);
+advSlider.subscribeOnResize(advCurrentSlider, advOptions);
 
 const gallerySlider = new SwiperInitializer('gallery__slider');
 const galleryOptions = gallerySlider.createGalleryOptions('gallery__pagination-button-prev', 'gallery__pagination-button-next');

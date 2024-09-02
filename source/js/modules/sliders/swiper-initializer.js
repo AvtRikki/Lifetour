@@ -51,6 +51,22 @@ export class SwiperInitializer {
     }
   }
 
+  subscribeOnResize(slider, options) {
+    window.addEventListener('resize', () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth >= 768 && screenWidth <= 1440) {
+        if (slider && slider.destroy) {
+          slider.destroy(true, true);
+          slider = null;
+        }
+      } else {
+        if (!slider) {
+          slider = this.initialize(options);
+        }
+      }
+    });
+  }
+
   createHeroOptions() {
     return {
       slidesPerView: 1,
