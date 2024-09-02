@@ -63,7 +63,7 @@
   }
 
   @include mixins.desktop {
-    margin-bottom: 39px;
+    margin-bottom: 49px;
   }
 }
 
@@ -92,7 +92,8 @@
   @include mixins.desktop {
     display: flex;
     flex-direction: row;
-    margin-bottom: 50px;
+    margin-bottom: 47px;
+    align-items: start;
   }
 }
 
@@ -119,7 +120,8 @@
 
   @include mixins.desktop {
     max-width: 380px;
-    padding: 40px 20px;
+    min-height: 332px;
+    padding: 40px 19px;
   }
 
   &::before {
@@ -129,7 +131,7 @@
     width: 42px;
     height: 42px;
     top: 18px;
-    left: 50%;
+    left: calc(50% + 1px);
     transform: translateX(-50%);
     border: 1px solid variables.$icons-color-secondary;
   }
@@ -159,11 +161,13 @@
 
   @include mixins.desktop {
     &::before {
+      width: 54px;
+      height: 54px;
       top: 40px;
     }
 
     &::after {
-      top: 50px;
+      top: 55px;
     }
   }
 }
@@ -179,6 +183,12 @@
     @include mixins.font-info(16px, 16px, 600);
 
     margin-top: 72px;
+  }
+
+  @include mixins.desktop {
+    @include mixins.font-info(18px, 18px, 600);
+
+    margin-top: 84px;
   }
 }
 
@@ -198,16 +208,32 @@
   mask: url("/__spritemap#sprite-shield-view");
 }
 
-.adv__item--knowledge::after {
-  mask: url("/__spritemap#sprite-crown-view");
+.adv__item--knowledge {
+  &::before {
+    left: calc(50%);
+  }
+
+  &::after {
+    mask: url("/__spritemap#sprite-crown-view");
+  }
 }
 
 .adv__item--equipment::after {
   mask: url("/__spritemap#sprite-boots-view");
 }
 
-.adv__item--path::after {
-  mask: url("/__spritemap#sprite-path-view");
+.adv__item--path {
+  @include mixins.desktop {
+    padding-left: 21px;
+
+    &::before {
+      left: calc(50% + 2px);
+    }
+  }
+
+  &::after {
+    mask: url("/__spritemap#sprite-path-view");
+  }
 }
 
 .adv__item--nature {
@@ -235,5 +261,21 @@
     flex-direction: row;
     gap: 4px;
     margin: 1px auto;
+  }
+}
+
+.adv__item--clone {
+  display: none;
+
+  @include mixins.desktop {
+    display: flex;
+  }
+}
+
+.adv__item--delimiter {
+  display: inline;
+
+  @include mixins.desktop {
+    display: none;
   }
 }

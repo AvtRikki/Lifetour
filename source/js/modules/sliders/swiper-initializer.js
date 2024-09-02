@@ -176,7 +176,27 @@ export class SwiperInitializer {
           slidesPerView: 5,
           allowTouchMove: false,
           initialSlide: 2,
-          // centeredSlides: true,
+          centeredSlides: true,
+        },
+      },
+      on: {
+        slideChangeTransitionEnd: function () {
+          const slides = this.slides;
+          const offset = 190;
+          if (window.innerWidth >= 1440) {
+            slides.forEach((slide) => {
+              slide.style.transform = `translateX(${offset}px)`;
+            });
+          }
+        },
+        init: function () {
+          const slides = this.slides;
+          const offset = 190;
+          if (window.innerWidth >= 1440) {
+            slides.forEach((slide) => {
+              slide.style.transform = `translateX(${offset}px)`;
+            });
+          }
         },
       },
     };
