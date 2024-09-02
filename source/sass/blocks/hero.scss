@@ -76,7 +76,7 @@
       image-set(
         "../img/hero/hero-1-desktop@1x.webp" type("image/webp"),
         "../img/hero/hero-1-desktop@1x.jpg" type("image/jpeg")
-      ) no-repeat ;
+      ) no-repeat;
     background-size: cover;
 
     @media (resolution >= 2dppx) {
