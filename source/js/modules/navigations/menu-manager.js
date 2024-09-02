@@ -1,6 +1,8 @@
 export class NavigationManager {
   #MENU_OPENED_PART = 'opened';
   #MENU_CLOSED_PART = 'closed';
+  #LOCK_SELECTOR = 'page__lock';
+  #MENU_ITEM_NAVIGATION_SELECTOR = '[data-scroll-to]';
 
   constructor(buttonClassName, menuClassName) {
     this.buttonClassName = buttonClassName;
@@ -14,11 +16,13 @@ export class NavigationManager {
   #showNavigationMenu(button, isOpenClassName, isClosedClassName) {
     button.classList.add(isOpenClassName);
     button.classList.remove(isClosedClassName);
+    document.body.classList.add(this.#LOCK_SELECTOR);
   }
 
   #closeNavigationMenu(button, isOpenClassName, isClosedClassName) {
     button.classList.remove(isOpenClassName);
     button.classList.add(isClosedClassName);
+    document.body.classList.remove(this.#LOCK_SELECTOR);
   }
 
   initialize() {
@@ -43,6 +47,17 @@ export class NavigationManager {
         if (!menu.contains(event.target) && event.target !== button && button.classList.contains(isOpenClassName)) {
           this.#closeNavigationMenu(button, isOpenClassName, isClosedClassName);
         }
+      });
+
+      const menuItems = document.querySelectorAll(this.#MENU_ITEM_NAVIGATION_SELECTOR);
+      menuItems.forEach((menuItem) => {
+        menuItem.addEventListener('click', () => {
+          const targetSection = document.querySelector(menuItem.getAttribute('data-scroll-to'));
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+            this.#closeNavigationMenu(button, isOpenClassName, isClosedClassName);
+          }
+        });
       });
     }
   }

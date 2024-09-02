@@ -7,6 +7,10 @@
   min-width: variables.$view-port-mobile;
 }
 
+.page__lock {
+  overflow: hidden;
+}
+
 .page__body {
   @include mixins.font-info(14px, 20px);
 
