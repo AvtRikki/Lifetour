@@ -5,6 +5,16 @@
   @include mixins.font-info(12px, 12px, 300);
 
   margin-bottom: 8px;
+
+  @include mixins.tablet {
+    margin-top: 13px;
+    margin-bottom: 7px;
+  }
+
+  @include mixins.desktop {
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
 }
 
 .trip-info__detail {

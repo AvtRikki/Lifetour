@@ -104,6 +104,7 @@
   background-color: variables.$background-color-primary;
   border: 1px solid rgba(variables.$button-color-primary, 0.1);
   position: relative;
+  margin: 0 auto;
 
   @include mixins.mobile {
     padding: 20px 9px;
