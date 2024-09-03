@@ -1,54 +1,66 @@
-# accelerator-second-project
-Стартовый репозиторий для работы над первым проектом в «Акселераторе» профессии «Фронтенд-разработчик»
 
-## Начало работы
+# Lifetour
 
-1. Установите node.js
-2. Проверьте версию node.js с помощью `node --version`
-3. Поддерживаемая версия сборки 18+
-4. Установите зависимости с помощью
+**Lifetour** is a frontend project created as part of the "Frontend Developer Accelerator" course. The project focuses on developing a responsive and accessible website using modern frontend technologies.
 
-```shell
-npm i
-```
+## Project Structure
 
-5. Запустите проект с помощью 
+- **source/**: Contains the primary project files including HTML, SCSS, and JavaScript.
+  - **img/**: Image assets.
+  - **styles/**: SCSS files for styling.
+  - **scripts/**: JavaScript files for interactivity.
+  - **index.html**: Main HTML file for the project.
 
-```shell
+## Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+
+### Installation
+
+1. **Clone the Repository**:
+   ```bash
+   git clone git@github.com:AvtRikki/Lifetour.git
+   ```
+2. **Navigate to the Project Directory**:
+   ```bash
+   cd Lifetour
+   ```
+3. **Install Dependencies**:
+   ```bash
+   npm install
+   ```
+
+### Running the Project
+
+To start the project in development mode:
+
+```bash
 npm run dev
 ```
 
-6. Дополнительные команды для работы со сборкой
+This will start a development server and open the project in your default web browser.
 
-- `npm run convert-rastr`: создайте webp версии растровых изображений в папке `source/img/`;
-- `npm run dev` запускает сервер для разработки;
-- `npm run build` собирает оптимизированную версию проекта в папке `dist`;
-- `npm run preview` запускает сервер с оптимизированной версией;
-- спрайт с иконками собран из файлов в папке `source/img/sprite/`;
-- для доступа к спрайту из `html` используйте путь `href="/__spritemap#sprite-{название файла иконки}"`;
+### Additional Commands
 
-7. В файле `index.html` в папке `source` описаны подсказки по структуре вашего проекта.
+- `npm run convert-rastr`: Create WebP versions of raster images in the `source/img/` directory.
+- `npm run build`: Generate an optimized production build in the `dist/` directory.
+- `npm run preview`: Preview the optimized production build.
+- `npm run test`: Run Pixel Perfect testing.
+- `npm run w3c`: Check HTML validity.
+- `npm run linthtml`: Lint HTML files.
+- `npm run stylelint`: Lint stylesheets.
+- `npm run lint-js`: Lint JavaScript files.
+- `npm run ls-lint`: Check file and folder naming conventions.
+- `npm run editorconfig`: Check for compliance with editorconfig settings.
 
-## Самопроверки
+## Contributing
 
-Тестирование Pixel Perfect
+Contributions are welcome! Please fork this repository and submit pull requests for any improvements or bug fixes.
 
-Запустить тестирование вашего проекта можно с помощью
+## License
 
-```shell
-npm run test 
-```
-
-Тестовый фреймворк обращается к адресу `localhost:3000` поэтому сервер должен быть запущен с `npm run dev`, запускайте команду тестирования в новом терминале, не закрывая сервер с проектом.
-
-
-В проекте используется множество дополнительных инструментов для самопроверки. Используйте их во время работы и перед отправкой вашего проекта:
-
-- `npm run w3c`: проверяет валидность HTML;
-- `npm run linthtml`: проверяет разметку по правилам linthtml;
-- `npm run html-validate`: проверяет HTML;
-- `npm run lint-bem`: проверяет БЭМ;
-- `npm run stylelint`: проверяет стили по правилам stylelint;
-- `npm run lint-js`: проверяет скрипты по правилам eslint;
-- `npm run ls-lint`: проверяет именование файлов и папок;
-- `npm run editorconfig`: проверяет editorconfig.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
